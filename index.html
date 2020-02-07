@@ -14,7 +14,7 @@
     ================================================== -->
    <link rel="stylesheet" href="assets/css/style2.css">
    <link rel="stylesheet" href="assets/css/insta.css">
-      <link rel="stylesheet" href="assets/css/posts.css">
+   <link rel="stylesheet" href="assets/css/posts.css">
 
    <link rel="stylesheet" href="assets/css/button.css">
       <link rel="stylesheet" href="assets/css/scroller.css">
@@ -30,13 +30,12 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 <script src="assets/js/scroller.js"> </script>
 
+<script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
+<script src="assets/js/p5.min.js"></script>
 
 	<link rel="shortcut icon" href="favicon.png" >
 </head>
 
-<header>
-
-</header>
 <main>
 
   <div class="Sidebar">
@@ -62,11 +61,22 @@
     </div>
 </div>
 </div>
-
-
-
 <div class="main2">
+<div class="header-inner">
+  <div class="header-one"></div>
+  <div class="header-two"></div>
 
+
+
+    <header id="header">
+
+
+
+
+
+
+  </header>
+  </div>
 <section class="grid-container-insta insta">
     <div class="Insta-Post">
       <div class="insta-title">
@@ -86,8 +96,6 @@
     <div class="insta-hover">
     <div class="hover-text">  <h1> Hello World! I'm Al. </h1>  </div>
  </div>
-
-
     </div>
       <div class="actions">
         <div>
@@ -124,6 +132,63 @@
   </div>
   </div>
 </section>
+
+<section class="grid-container-insta insta">
+      <div class="Insta-Post">
+        <div class="insta-title">
+          <div class="name-circle">
+                <div class=" gradient-border" id="box">
+            <img src="assets/img/profile.png"class="insta-avatar">
+          </div>
+        </div>
+          <div class="insta-name">
+            <h3>Al Sigman</h3>
+            <h4>New York City, New York</h4>
+        </div>
+        <div class="dots rotate"> <h1>...</h1>
+        </div>
+    </div>
+      <div class="instagram-picture">
+      <div class="insta-hover">
+      <div class="hover-text">  <h1> I like to build things with technology </h1>  </div>
+   </div>
+      </div>
+        <div class="actions">
+          <div>
+            <i class="far fa-heart heart" id="heart"></i>
+          </div>
+          <div>
+            <i class="far fa-comment reverse"></i>
+          </div>
+          <div>
+            <a href="mailto:alsigman@gmail.com" target="_blank">
+            <i class="far fa-paper-plane" ></i>
+            </a>
+          </div>
+          <div>
+            <i class="far fa-bookmark" id="bookmark"></i>
+          </div>
+        </div>
+        <div class="liked-by">
+          <ul>Liked by
+            <li>my_mom </li>
+            <li>  my_dad </li>
+            <li> my_brother</li>
+          </ul>
+          </div>
+        <div class="comments">
+        <ul>Al Sigman
+          <li> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
+            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
+            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+             aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit
+             in voluptate velit esse cillum dolore eu fugiat nulla pariatur. </li>
+          <br>
+        </ul>
+    </div>
+    </div>
+</section>
+
 <section class="grid-container-insta insta">
     <div class="Insta-Post">
       <div class="insta-title">
@@ -134,15 +199,15 @@
       </div>
         <div class="insta-name">
           <h3>Al Sigman</h3>
-          <h4>Columbus, Ohio</h4>
+          <h4>Cincinnati, Ohio</h4>
       </div>
       <div class="dots rotate"> <h1>...</h1>
       </div>
   </div>
-    <div class="insta instagram-picture">
-
-      <h1> Hi!, I'm Al!</h1>
-
+    <div class="instagram-picture">
+    <div class="insta-hover">
+    <div class="hover-text">  <h1> I like to nerd out. </h1>  </div>
+ </div>
     </div>
       <div class="actions">
         <div>
@@ -179,6 +244,7 @@
   </div>
   </div>
 </section>
+
 <section class="grid-container-insta insta">
     <div class="Insta-Post">
       <div class="insta-title">
@@ -189,15 +255,19 @@
       </div>
         <div class="insta-name">
           <h3>Al Sigman</h3>
-          <h4>Columbus, Ohio</h4>
+          <h4>Detroit, Michigan</h4>
       </div>
       <div class="dots rotate"> <h1>...</h1>
       </div>
   </div>
-    <div class="insta instagram-picture">insta</div>
+    <div class="instagram-picture">
+    <div class="insta-hover">
+    <div class="hover-text">  <h1> I like to rock out. </h1>  </div>
+ </div>
+    </div>
       <div class="actions">
         <div>
-          <i class="far fa-heart" id="heart2"></i>
+          <i class="far fa-heart heart" id="heart"></i>
         </div>
         <div>
           <i class="far fa-comment reverse"></i>
@@ -208,7 +278,7 @@
           </a>
         </div>
         <div>
-          <i class="far fa-bookmark" id="bookmark2"></i>
+          <i class="far fa-bookmark" id="bookmark"></i>
         </div>
       </div>
       <div class="liked-by">
@@ -228,13 +298,153 @@
         <br>
       </ul>
   </div>
+  </div>
+</section>
+
+<section class="grid-container-insta insta">
+    <div class="Insta-Post">
+      <div class="insta-title">
+        <div class="name-circle">
+              <div class=" gradient-border" id="box">
+          <img src="assets/img/profile.png"class="insta-avatar">
+        </div>
+      </div>
+        <div class="insta-name">
+          <h3>Al Sigman</h3>
+          <h4>Tampa, Florida</h4>
+      </div>
+      <div class="dots rotate"> <h1>...</h1>
+      </div>
+  </div>
+    <div class="instagram-picture">
+    <div class="insta-hover">
+    <div class="hover-text">  <h1> I like to jump in. </h1>  </div>
+ </div>
+    </div>
+      <div class="actions">
+        <div>
+          <i class="far fa-heart heart" id="heart"></i>
+        </div>
+        <div>
+          <i class="far fa-comment reverse"></i>
+        </div>
+        <div>
+          <a href="mailto:alsigman@gmail.com" target="_blank">
+          <i class="far fa-paper-plane" ></i>
+          </a>
+        </div>
+        <div>
+          <i class="far fa-bookmark" id="bookmark"></i>
+        </div>
+      </div>
+      <div class="liked-by">
+        <ul>Liked by
+          <li>my_mom </li>
+          <li>  my_dad </li>
+          <li> my_brother</li>
+        </ul>
+        </div>
+      <div class="comments">
+      <ul>Al Sigman
+        <li> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
+          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
+          ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+           aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit
+           in voluptate velit esse cillum dolore eu fugiat nulla pariatur. </li>
+        <br>
+      </ul>
+  </div>
+  </div>
+</section>
+
+
+<section class="bg--1 padding-bot">
+  <div class="scrum-head bg--1">
+  <center>
+    <h1 class="bk scrum-header"> My Skillset Scrum Board </h1>
+  </center>
+
+  <div class="scrum-checks">
+
+  <label class="scrum-check-detail">
+    <input type="checkbox">
+    <p>UX / UI</p>
+    <span class="checkbox-custom"></span>
+  </label>
+  <label class="scrum-check-detail">
+    <input type="checkbox">
+    <p>Back End Frameworks</p>
+    <span class="checkbox-custom"></span>
+  </label>
+  <label class="scrum-check-detail">
+    <input type="checkbox">
+    <p>Creative Programming</p>
+    <span class="checkbox-custom"></span>
+  </label>
+  <label class="scrum-check-detail">
+    <input type="checkbox">
+    <p>Embedded Systems</p>
+    <span class="checkbox-custom"></span>
+  </label>
+
+</div>
+  </div>
+  <div class="skill-scrum">
+  <div class="skill-scrum-todo">
+    <div>
+    <center>  <h1>To Do </h1></center>
+    </div>
+    <div class="back-end"> Node.js    </div>
+    <div class="back-end"> AJAX    </div>
+    <div class="music"> Max 4 Live</div>
+    <div class="back-end">Spring</div>
+    <div class="back-end">Hibernate</div>
+    <div class="front-end">jQuery</div>
+    <div class="back-end">MVC</div>
+
+  </div>
+  <div class="skill-scrum-inprogress">
+    <div>
+    <center>  <h1>In Progress </h1></center>
+    </div>
+
+    <div class="back-end">Django</div>
+    <div class="back-end">Python</div>
+    <div class="creative">  Touch Designer  </div>
+    <div class="creative">  p5.js </div>
+    <div class="systems">  Arduino Programming </div>
+    <div class="systems">  RaspberryPi Programming </div>
+    <div class="front-end">  Javascript Advanced </div>
+    <div class="creative">  Tableau Data Visualization </div>
+
+
+  </div>
+  <div class="skill-scrum-deployed">
+    <div>
+    <center>  <h1>Mastered </h1></center>
+    </div>
+
+    <div class="music"> Ableton Live </div>
+    <div class="music"> Avid ProTools </div>
+    <div class="front-end"> Adobe Suite
+
+     </div>
+    <div class="front-end"> Bootstrap / Responsive Design / Mobile</div>
+    <div class="front-end"> HTML5</div>
+    <div class="front-end"> CSS3</div>
+    <div class="back-end">  Python Essentials  </div>
+    <div class="front-end">  Javascript Essentials  </div>
+    <div class="back-end">  Java Essentials  </div>
+    <div class="back-end">  MySQL  </div>
+    <div class="other">  Git  </div>
+
+  </div>
+
   </div>
 </section>
 
 
 <section class="grid-container-projects">
-
-
 <div class="Project">
 <div class="project-title">
 <h1> Virtual Pets</h1>
@@ -270,6 +480,8 @@ voluptate velit esse cillum
 
     <div class="Project-Picture">
 
+<div class="project-scroller">
+
 
             <div class="scro">
               <h2 class="ss1 active">Made With  :
@@ -284,6 +496,10 @@ voluptate velit esse cillum
               </b>
               </h2>
             </div>
+</div>
+            <div class="project-picture-1"></div>
+            <div class="project-picture-2"></div>
+            <div class="project-picture-3"></div>
 
     </div>
 </section>
@@ -293,19 +509,26 @@ voluptate velit esse cillum
 
     <div class="Project-Picture">
 
+      <div class="project-scroller">
+
+
                   <div class="scro">
                     <h2 class="ss1 active">Made With  :
                     <b class="rotation-wrapper">
-                      <span class="s1 active">Python</span>
-                      <span class="s2 ">Django </span>
-                      <span class="s3 ">SSH </span>
-                      <span class="s4 ">HTML </span>
+                      <span class="s1 active">PHP</span>
+                      <span class="s2 ">CSS </span>
+                      <span class="s3 ">HTML </span>
+                      <span class="s4 ">Python </span>
                       <span class="s5 ">Django </span>
                       <span class="s6 ">Remember </span>
 
                     </b>
                     </h2>
                   </div>
+      </div>
+                  <div class="project-picture-1"></div>
+                  <div class="project-picture-2"></div>
+                  <div class="project-picture-3"></div>
     </div>
 
     <div class="Project">
@@ -346,8 +569,15 @@ voluptate velit esse cillum
     </div>
 
 </section>
+<section>
+  <canvas id="myChart"></canvas>
+
+</section>
 </div>
 </main>
+<script src="assets/js/charts.js" type="text/javascript"></script>
+
 <script src="assets/js/style.js"> </script>
-<script src="assets/js/scroller.js"> </script>
+
 <script src="assets/js/insta-content.js"> </script>
+<script src="assets/js/header.js"> </script>
