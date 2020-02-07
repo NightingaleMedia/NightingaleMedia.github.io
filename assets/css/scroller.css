@@ -1,0 +1,64 @@
+/*
+* Rotating Text
+*/
+
+.scro {
+    display: inline-block;
+
+    /*    position: fixed;
+        left: 50%;
+        transform: translatex(-50%);*/
+
+}
+
+.scro h2 {
+    font-size: 3.5rem;
+    font-family: sans-serif;
+    color: #fff;
+    display: none;
+    text-align: left;
+    margin-left: 100px;
+    font-weight: 300;
+}
+
+.scro h2.active {
+    display: block;
+}
+
+.scro h2 span {
+    display: block;
+    position: absolute;
+    left: 0;
+    bottom: 3px;
+    transform: translateY(-130%);
+    font-weight: normal;
+    transition-timing-function: cubic-bezier(0, .89, .44, 1);
+    transition-duration: .5s;
+}
+
+.scro h2 span.active {
+    font-family: FuturaNewDemi, Arial, sans-serif;
+    display: block;
+    transform: translateY(0%);
+
+    font-weight: 800;
+}
+
+.scro h2 span.removed {
+    display: block;
+    transform: translateY(130%);
+}
+
+.scro h2 span.hidden {
+    display: none;
+}
+
+.scro h2 b.rotation-wrapper {
+    position: relative;
+    display: inline-block;
+    margin-top: -10px;
+    height: 80px;
+    width: 400px;
+    overflow:hidden;
+    margin-bottom: -20px;
+}
