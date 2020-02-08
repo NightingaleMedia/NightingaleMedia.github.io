@@ -31,7 +31,7 @@
 .name-circle{
   width: 80px;
   margin:15px;
-  padding-top: 5px;
+
 }
 
 
@@ -42,7 +42,6 @@
   width: 64px;
   height: 64px;
   color: white;
-  font-family: 'Raleway';
   font-size: 2.5rem;
   border-radius: 100%;
 }
@@ -59,7 +58,7 @@
   left: calc(-1 * var(--borderWidth));
   height: calc(100% + var(--borderWidth) * 2);
   width: calc(100% + var(--borderWidth) * 2);
-  background: linear-gradient(60deg, #f79533, #f37055, #ef4e7b, #ffffff);
+  background: linear-gradient(60deg, #f79533, #f37055, #ef4e7b, #cd0cc1, #8b2be3, #f78e1e);
   border-radius: 100%;
   animation: animatedgradient 3s ease alternate infinite;
   background-size: 300% 300%;
@@ -80,11 +79,9 @@
 
 .insta-avatar{
   max-height: 64px;
-  margin: 10px;
-  margin-top: 12px;
-  margin-right: 11px;
-  position: relative;
   z-index: 1;
+  align-self: center;
+  opacity: 1;
 }
 
 
