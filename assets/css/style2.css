@@ -44,34 +44,34 @@ header#header {
 }
 
 .header-one{
-  grid-column: 7/8;
-  grid-row: 6;
+  grid-column: 4/8;
+  grid-row: 8/10;
   background-color: white;
-
+  border-radius: 100%;
   opacity: 0.3;
   height: 360px;
   width: 360px;
 }
 
 .header-two{
-  grid-column: 12/18;
-  grid-row: 7/12;
-  background-color: white;
-
+  grid-column: 9/16;
+  grid-row: 2/5;
+  background-color: blue;
+    border-radius: 100%;
   opacity: 0.3;
-  height: 260px;
-  width: 260px;
+  height: 460px;
+  width: 460px;
 
 }
 
 .header-three{
-  grid-column: 9/11;
-  grid-row: 11/12;
-  background-color: white;
-
+  grid-column: 8/9;
+  grid-row: 14/18;
+  background-color: green;
+border-radius: 100%;
   opacity: 0.3;
-  height: 260px;
-  width: 260px;
+  height: 300px;
+  width: 300px;
 }
 
 .grid-container-projects {
