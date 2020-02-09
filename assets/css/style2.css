@@ -23,6 +23,16 @@ h1 {
   padding: 0;
   margin: 0;
 }
+
+
+h2 {
+  color: white;
+  font-size: 3em;
+  padding: 0;
+  margin: 0;
+}
+
+
 h3{
   font-weight: 10;
   color: grey;
@@ -36,11 +46,20 @@ h3{
 }
 
 
+.header-inner a{
+  color: white;
+  text-decoration: none;
+}
+
+.header-inner h2{
+  margin-left: 20px;
+}
 
 header#header {
   grid-column: 1/-1;
   grid-row: 1/-1;
   z-index: -1;
+  position:relative;
 }
 .header-one,
 .header-two,
@@ -65,6 +84,12 @@ header#header {
 
   height: 360px;
   width: 360px;
+}
+
+.header-one:hover,
+.header-two:hover,
+.header-three:hover{
+    background-color: rgba(255,255,255,0.6);
 }
 
 .header-two{
@@ -107,6 +132,8 @@ header#header {
 }
 
 
+
+
 section{
   min-height: 1000px;
 }
@@ -132,6 +159,7 @@ background-attachment: fixed;
 
 .Sidebar {
 grid-column: 1;
+position: fixed;
  }
 
 
@@ -139,6 +167,7 @@ grid-column: 1;
   grid-column: 2;
 
 }
+
  .sidebar-holder{
    width: 115px;
    display: flex;
@@ -226,7 +255,7 @@ display: none;
   margin-bottom: 80px;
 
 }
-.skill-scrum h1 {
+.skill-scrum h2 {
     font-size: 2.5em;
     color: white;
     margin-top: 20px;
@@ -342,7 +371,7 @@ margin-bottom: 15px;
   background-color: #181818;
 }
 
-.project-title h1{
+.project-title h2{
     margin-top: 40px;
     font-size: 3.5rem;
     line-height: 1em;
@@ -423,6 +452,61 @@ background: linear-gradient(90deg, rgba(120,64,255,1) 0%, rgba(222,0,255,1) 100%
   background-color: yellow;
   grid-column: 4/7;
   grid-row: 9/12;
+}
+footer {
+  position:relative;
+  padding-top: 50px;
+  min-height: 500px;
+  background-color: black;
+  display: grid;
+  grid-template-columns: 120px 2fr 1fr 1fr;
+  grid-template-rows: 1fr 40px;
+  grid-template-areas: " . col1 col2 col3"
+                       "tagline tagline tagline tagline";
+}
+
+footer h2 {
+  color: white;
+}
+
+footer p {
+  font-size: 1.2em;
+  line-height: 1.5em;
+  color: white;
+  margin-right: 200px;
+}
+
+footer i{
+  font-size: 2em;
+  margin-right: 15px;
+  color: white;
+}
+
+.footer-col-1{
+  grid-area: col1;
+}
+
+.footer-img {
+  max-height: 120px;
+  margin-right: 20px;
+  margin-top: 60px;
+}
+.footer-col-2{
+  grid-area: col2;
+
+}
+.footer-col-3{
+  grid-area: col3;
+  margin-top: 180px;
+}
+
+.tagline{
+  grid-area: tagline;
+  background-color: white;
+  display: flex;
+  flex-direction: row-reverse;
+
+  align-items: center;
 }
 
 
