@@ -17,6 +17,7 @@
   background-color: white;
   border-radius: 10px;
   box-shadow: 10px 10px 20px 0px grey;
+  max-height: 930px;
 
 }
 
@@ -134,14 +135,6 @@ opacity: 0.3;
   padding-left: 10px;
 }
 
-
-
-
-
-
-
-
-
 .actions {
 grid-area: actions;
 display: flex;
@@ -183,11 +176,11 @@ margin-right: 20px; }
   margin-bottom: 0px;
   padding-bottom: 0px;
  }
+
 .grid-container-insta ul {
   font-weight: 600;
   margin: none;
   margin-bottom: 0;
-
   padding-inline-start: 15px !important;
   display: inline-block;
 }
@@ -198,5 +191,5 @@ margin-right: 20px; }
 }
 .grid-container-insta li.tags{
   color: blue;
-  font-weight:
+  font-weight: 200;
 }
