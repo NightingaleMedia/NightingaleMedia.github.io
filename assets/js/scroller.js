@@ -16,9 +16,9 @@ var setSlogans = function () {
     if (currSlogan > count) currSlogan = 1;
     var nS = currSlogan;
 
-    console.log(count);
+    // console.log(count);
 
-    console.log("count="+count+"/ns="+nS+"/cs="+cS+"/ps="+pS+"/pps="+ppS);
+    // console.log("count="+count+"/ns="+nS+"/cs="+cS+"/ps="+pS+"/pps="+ppS);
 
     $(".scro h2 .s" + cS).addClass("removed");
     $(".scro h2 .s" + pS).addClass("hidden");//.removeClass("active removed");
