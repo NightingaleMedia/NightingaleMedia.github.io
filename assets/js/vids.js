@@ -97,7 +97,7 @@ const getVids = (u) => {
 }
 
 button2.addEventListener('click', () => {
-    testHTML()
+    getVids(url);
 })
 //   setTimeout(10000, getVids(url));
 
