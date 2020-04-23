@@ -63,22 +63,19 @@ const testHTML = () => {
     anchor.appendChild(title);
 }
 
-const buildVideos = (data) => {
-    console.log(data);
-    const anchor = document.querySelector('.anchor-elem');
-    data.items.forEach((item) => {
-        if (item.snippet.title !== "Private video") {
-
-
-            videoBox = new VideoCreator();
-            let imageSrc = item.snippet.thumbnails.standard.url;
-            videoBox.addImageInfo(imageSrc, item.snippet.title);
-            videoBox.addHref(`http://www.youtube.com/watch?v=${item.snippet.resourceId.videoId}`, item.snippet.title)
-            anchor.appendChild(videoBox.render());
-
-        }
-    })
-}
+  const buildVideos = (data) => {
+      console.log(data);
+      const anchor = document.querySelector('.anchor-elem');
+      data.items.forEach((item) => {
+          if (item.snippet.title !== "Private video") {
+              videoBox = new VideoCreator();
+              let imageSrc = item.snippet.thumbnails.standard.url;
+              videoBox.addImageInfo(imageSrc, item.snippet.title);
+              videoBox.addHref(`http://www.youtube.com/watch?v=${item.snippet.resourceId.videoId}`, item.snippet.title)
+              anchor.appendChild(videoBox.render());
+          }
+      })
+  }
 
 const API_KEY = 'AIzaSyAn4glPcwA-22h509z7xsHu04f7TWFrQuQ';
 const PLAYLIST_ID = 'PLGVZlmzZDMxIcmlHvDzWs-esBabZ2JDWz';
