@@ -1,4 +1,4 @@
-var i = 0;
+
 var imgArray = new Array();
 
 var numInstas = document.querySelectorAll(".instagram-picture");
@@ -6,7 +6,7 @@ var numInstas = document.querySelectorAll(".instagram-picture");
 console.log(numInstas);
 
 
-for(i=0;i<=numInstas.length; i++){
+for(let i = 0; i<=numInstas.length; i++){
   imgArray[i] = new Image();
   imgArray[i].src = 'assets/img/insta' + i  +  '.png';
   var color = getRandomColor();
