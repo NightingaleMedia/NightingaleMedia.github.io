@@ -70,12 +70,12 @@ const buildVideos = (data) => {
         if (item.snippet.title !== "Private video") {
 
 
-            //       videoBox = new VideoCreator();
-            //       let imageSrc = item.snippet.thumbnails.standard.url;
-            //       videoBox.addImageInfo(imageSrc, item.snippet.title);
-            //       videoBox.addHref(`http://www.youtube.com/watch?v=${item.snippet.resourceId.videoId}`, item.snippet.title)
-            //       anchor.appendChild(videoBox.render());
-            anchor.appendChild(title);
+            videoBox = new VideoCreator();
+            let imageSrc = item.snippet.thumbnails.standard.url;
+            videoBox.addImageInfo(imageSrc, item.snippet.title);
+            videoBox.addHref(`http://www.youtube.com/watch?v=${item.snippet.resourceId.videoId}`, item.snippet.title)
+            anchor.appendChild(videoBox.render());
+
         }
     })
 }
