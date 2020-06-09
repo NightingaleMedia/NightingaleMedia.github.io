@@ -1,0 +1,184 @@
+@media screen and (max-width: 600px) {
+    article {
+        grid-template-columns: 1fr !important;
+        grid-template-rows: 20px 340px 20fr;
+    }
+    .single__project--text h3 {
+        font-size: 1.75em !important;
+        font-weight: 900;
+        margin-bottom: 0 !important;
+    }
+    .single__project--text p, .single__project--text div.single__project--list {
+        font-size: 1.25em !important;
+    }
+    .single__project--tag {
+        border-radius: 0% !important;
+    }
+}
+
+section.section__projects{
+    background-color: #f7f7f7;
+    padding-bottom: 3em;
+}
+section.section__projects h3, section.section__projects p {
+    margin: 0;
+    padding: 0;
+
+}
+
+section.section__projects h1 {
+    padding-top: 1.5em;
+    padding-bottom: 1.5em;
+}
+
+.section__projects>article {
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    background-color: white;
+    max-height: 400px;
+    max-width: 980px;
+    margin-left: auto;
+    margin-right: auto;
+    display: grid;
+    grid-auto-rows: 400px;
+    grid-template-columns: 5% 46% 49%;
+    margin-bottom: 250px;
+}
+.single__project{
+    background-color: rgba(0,0,0,0) !important;
+}
+.single__project--tag {
+    height: 100%;
+    width: 100%;
+    background-color: #3179aa;
+    z-index: 5;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+}
+
+.single__project--picture-wrap {
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    height: 100%;
+    width: 100%;
+}
+
+.single__project--picture-wrap>span {
+    position: absolute;
+    left: 27px;
+    height: 10%;
+    width: 4px;
+    border-radius: 10px;
+    background-color: white;
+    transition: transform 0.2s;
+}
+
+.single__project--picture-wrap>span:nth-of-type(1) {
+    transform: rotate(-45deg);
+}
+
+.single__project--picture-wrap>span:nth-of-type(2) {
+    transform: rotate(45deg);
+}
+
+.single__project--picture {
+    position: absolute;
+    max-height: 97%;
+    max-width: 97%;
+    right: 6px;
+}
+
+.single__project--bg {
+    background-color: #111111;
+    z-index: 2;
+    transition: all 0.2s;
+    cursor: pointer;
+}
+
+.single__project--bg:hover+.single__project--text {
+    background-color: #c6e8ff !important;
+}
+
+.single__project--text {
+    background-color: #eeeeee;
+    padding: 1em;
+    display: flex;
+    flex-direction: column;
+    z-index: 1;
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    transform: translate(0px, 0);
+}
+
+.proj-shifted {
+    transform: translate(220px, 0);
+    grid-template-columns: 1% 46% 49% !important;
+}
+
+.proj-shifted .single__project--picture-wrap>span:nth-of-type(1) {
+    transform: rotate(180deg);
+}
+
+.proj-shifted .single__project--picture-wrap>span:nth-of-type(2) {
+    transform: rotate(270deg);
+}
+
+.proj-shifted>.single__project--text {
+    transform: translate(-360px, 0) rotate(90deg) !important;
+}
+
+.proj-shifted>.single__project--text p {
+    opacity: 0 !important;
+}
+
+.proj-shifted .single__project--list>span {
+    opacity: 0 !important;
+}
+
+.single__project--text h3 {
+    line-height: 50px;
+    font-size: 2.5em;
+    /* font-family: Futura-Medium; */
+    font-weight: 600;
+    color: #181818;
+    margin-bottom: 0.25em !important;
+}
+
+.single__project--text p, .single__project--text div.single__project--list {
+    font-size: 1.75em;
+    opacity: 1;
+    transition: 1s ease;
+    transition-delay: 0.2s;
+}
+
+.single__project--desc {
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 1.25em !important;
+    /* justify-self: end !important; */
+    line-height: 1.5em;
+    margin-top: auto !important;
+}
+
+.single__project--desc span {
+    background-color: #181818;
+    padding: 2px;
+}
+
+.single__project--desc span a {
+    font-weight: 900 !important;
+    color: white;
+    text-decoration: none;
+}
+
+.single__project--list {
+    justify-self: end;
+    margin-top: auto;
+}
+
+.single__project--list>span {
+    background-color: azure;
+    padding: 4px;
+    margin: 5px;
+    line-height: 50px;
+}

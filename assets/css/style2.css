@@ -1,9 +1,10 @@
+@import url('assets/fonts/Raleway');
 
+html {
+  width: 100%;
+}
 
-@import url('https://fonts.googleapis.com/css?family=Raleway:200');
-
-
-body{
+body {
   margin: 0;
   moz-transition: all .4s ease-in-out;
   -o-transition: all .4s ease-in-out;
@@ -13,9 +14,9 @@ body{
   color: #333133;
 }
 
-main{
+main {
   display: grid;
-  grid-template-columns: 120px 1fr;
+  grid-template-columns: 100px 1fr;
 }
 
 h1 {
@@ -23,8 +24,8 @@ h1 {
   font-size: 3em;
   padding: 0;
   margin: 0;
+  text-align: center;
 }
-
 
 h2 {
   color: white;
@@ -33,26 +34,25 @@ h2 {
   margin: 0;
 }
 
-
-h3{
+h3 {
   font-weight: 10;
   color: grey;
 }
-
-
-.header-inner{
+.black{
+  color: #181818;
+}
+.header-inner {
   display: grid;
   grid-template: repeat(24, 1fr) / repeat(24, 1fr);
   max-height: 980px;
 }
 
-
-.header-inner a{
+.header-inner a {
   color: white;
   text-decoration: none;
 }
 
-.header-inner h2{
+.header-inner h2 {
   margin-left: 20px;
 }
 
@@ -60,11 +60,10 @@ header#header {
   grid-column: 1/-1;
   grid-row: 1/-1;
   z-index: -1;
-  position:relative;
+  position: relative;
 }
-.header-one,
-.header-two,
-.header-three{
+
+.header-one, .header-two, .header-three {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -77,46 +76,38 @@ header#header {
   overflow: hidden;
 }
 
-.header-one{
-
+.header-one {
   grid-column: 4/8;
   grid-row: 8/10;
-  background-color: rgba(255,255,255,0.3);
-
+  background-color: rgba(255, 255, 255, 0.3);
   height: 360px;
   width: 360px;
 }
 
-.header-one:hover,
-.header-two:hover,
-.header-three:hover{
-    background-color: rgba(255,255,255,0.6);
+.header-one:hover, .header-two:hover, .header-three:hover {
+  background-color: rgba(255, 255, 255, 0.6);
 }
 
-.header-two{
+.header-two {
   grid-column: 9/16;
   grid-row: 4/7;
-
-  background-color: rgba(255,255,255,0.3);
+  background-color: rgba(255, 255, 255, 0.3);
   height: 460px;
   width: 460px;
-
 }
 
-.header-three{
+.header-three {
   grid-column: 8/9;
   grid-row: 14/18;
-  background-color: rgba(255,255,255,0.3);
+  background-color: rgba(255, 255, 255, 0.3);
   height: 300px;
   width: 300px;
 }
 
-.header-text{
+.header-text {
   grid-column: 2/20;
   grid-row: 2;
-
   font-size: 3em;
-
 }
 
 .grid-container-projects {
@@ -125,6 +116,7 @@ header#header {
   grid-template-rows: 1fr;
   grid-template-areas: " Project Project-Picture";
 }
+
 .grid-container-2 {
   display: grid;
   grid-template-columns: 0.65fr 0.35fr;
@@ -132,18 +124,15 @@ header#header {
   grid-template-areas: "Project-Picture Project";
 }
 
-article{
-  min-height: 1000px;
-}
-section{
+section {
   min-height: 1000px;
 }
 
-.bg--1{
+.bg--1 {
   background-color: #f7f7f7;
 }
 
-.padding-bot{
+.padding-bot {
   padding-bottom: 50px;
 }
 
@@ -151,50 +140,53 @@ section{
   color: #181818;
 }
 
-section.insta{
-background-color: rgba(0, 0, 0, 1);
-background-image: url("../../assets/img/bg-insta.png");
-background-blend-mode:normal;
-background-attachment: fixed;
+section.insta {
+  background-color: rgba(0, 0, 0, 1);
+  background-image: url("../../assets/img/bg-insta.png");
+  background-blend-mode: normal;
+  background-attachment: fixed;
 }
 
 .Sidebar {
-grid-column: 1;
-position: fixed;
- }
+  grid-column: 1;
+  position: fixed;
+}
 
+.small {
+  transform: translate(-100%, 0);
+}
 
-.main2{
+.main2 {
   grid-column: 2;
 }
 
- .sidebar-holder{
-   width: 115px;
-   display: flex;
-   flex-direction: column;
-   justify-content:center;
-   align-items: center;
-   position: fixed;
- }
+.sidebar-holder {
+  width: 115px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+}
 
-.logo{
+.logo {
   width: 95px;
   height: 95px;
 }
- .sidebar-inner:first-child{
-   height: 220px;
- }
 
- .sidebar-inner{
-   padding-top: 30px;
-   padding-bottom: 30px;
- }
+.sidebar-inner:first-child {
+  height: 220px;
+}
 
- .sidebar-inner a {
-   text-decoration: none;
-   color: #333133;
- }
+.sidebar-inner {
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
 
+.sidebar-inner a {
+  text-decoration: none;
+  color: #333133;
+}
 
 .Project {
   grid-area: Project;
@@ -206,49 +198,53 @@ position: fixed;
   grid-template-areas: "project-title" "project-about" "project-sub-detail" "project-button";
   padding-left: 5em;
   padding-right: 5em;
- }
+}
 
 .Project p {
   font-size: 1.3em;
 }
-.Project h3{
-    font-size: 2em;
-    color: #EC03C1;
-    font-weight: 600;
+
+.Project h3 {
+  font-size: 2em;
+  color: #EC03C1;
+  font-weight: 600;
 }
-.project-title{
+
+.project-title {
   grid-area: project-title;
   background-color: #181818;
 }
 
-.project-title h2{
-    margin-top: 40px;
-    font-size: 3.5rem;
-    line-height: 1em;
+.project-title h2 {
+  margin-top: 40px;
+  font-size: 3.5rem;
+  line-height: 1em;
 }
 
-.project-title-2{
-grid-area: project-title;
-margin-top: 108px;
-height: 3px;
-width: 250px;
-background: rgb(120,64,255);
-background: linear-gradient(90deg, rgba(120,64,255,1) 0%, rgba(222,0,255,1) 100%);
+.project-title-2 {
+  grid-area: project-title;
+  margin-top: 108px;
+  height: 3px;
+  width: 250px;
+  background: rgb(120, 64, 255);
+  background: linear-gradient(90deg, rgba(120, 64, 255, 1) 0%, rgba(222, 0, 255, 1) 100%);
 }
 
-.project-about{
+.project-about {
   grid-area: project-about;
 }
-.project-about p{
+
+.project-about p {
   font-weight: 100;
 }
+
 .project-sub-detail {
   grid-area: project-sub-detail;
   display: grid;
   grid-template-columns: 1fr 1fr;
 }
 
-.project-sub-detail p{
+.project-sub-detail p {
   font-size: 1em;
   font-weight: 100;
   margin-top: 5px;
@@ -268,7 +264,7 @@ background: linear-gradient(90deg, rgba(120,64,255,1) 0%, rgba(222,0,255,1) 100%
   font-weight: 500;
 }
 
-.project-button{
+.project-button {
   grid-area: project-button;
 }
 
@@ -276,7 +272,7 @@ background: linear-gradient(90deg, rgba(120,64,255,1) 0%, rgba(222,0,255,1) 100%
   grid-area: Project-Picture;
   display: grid;
   grid-template-columns: repeat(12, 1fr);
-  grid-template-rows:  repeat(12,1fr);
+  grid-template-rows: repeat(12, 1fr);
   background: #101010;
   /* background: linear-gradient(90deg, rgba(120,64,255,1) 0%, rgba(222,0,255,1) 100%); */
 }
@@ -285,7 +281,7 @@ background: linear-gradient(90deg, rgba(120,64,255,1) 0%, rgba(222,0,255,1) 100%
   padding-top: 40px;
 }
 
-.project-scroller{
+.project-scroller {
   grid-column: 1/13;
   grid-row: 1/3;
 }
@@ -300,27 +296,26 @@ background: linear-gradient(90deg, rgba(120,64,255,1) 0%, rgba(222,0,255,1) 100%
   max-width: 330px;
 }
 
-.project-picture-3 img{
+.project-picture-3 img {
   max-height: 250px;
   max-width: 250px;
-
 }
 
-.project-picture-1{
+.project-picture-1 {
   /* 500x500 */
   background-color: blue;
   grid-column: 5/11;
   grid-row: 4/10;
 }
 
-.project-picture-2{
+.project-picture-2 {
   /* 330 x 330 */
   background-color: red;
   grid-column: 2/6;
   grid-row: 3/7;
 }
 
-.project-picture-3{
+.project-picture-3 {
   /* 250 x 250 */
   background-color: yellow;
   grid-column: 4/7;
@@ -328,15 +323,14 @@ background: linear-gradient(90deg, rgba(120,64,255,1) 0%, rgba(222,0,255,1) 100%
 }
 
 footer {
-  position:relative;
+  position: relative;
   padding-top: 50px;
   min-height: 500px;
   background-color: black;
   display: grid;
   grid-template-columns: 120px 2fr 1fr 1fr;
   grid-template-rows: 1fr 40px;
-  grid-template-areas: " . col1 col2 col3"
-                       "tagline tagline tagline tagline";
+  grid-template-areas: " . col1 col2 col3" "tagline tagline tagline tagline";
 }
 
 footer h2 {
@@ -350,13 +344,13 @@ footer p {
   margin-right: 200px;
 }
 
-footer i{
+footer i {
   font-size: 2em;
   margin-right: 15px;
   color: white;
 }
 
-.footer-col-1{
+.footer-col-1 {
   grid-area: col1;
 }
 
@@ -365,16 +359,17 @@ footer i{
   margin-right: 20px;
   margin-top: 60px;
 }
-.footer-col-2{
-  grid-area: col2;
 
+.footer-col-2 {
+  grid-area: col2;
 }
-.footer-col-3{
+
+.footer-col-3 {
   grid-area: col3;
   margin-top: 180px;
 }
 
-.tagline{
+.tagline {
   grid-area: tagline;
   background-color: white;
   display: flex;
@@ -398,5 +393,68 @@ footer i{
 }
 
 .reverse {
-  transform: rotateY( 180deg );
+  transform: rotateY( 180deg);
+}
+
+/* At the top level of your code */
+
+@media screen and (max-width: 600px) {
+  body {
+    position: relative;
+  }
+  .header-inner {
+    display: block;
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    position: relative;
+  }
+  .header-one, .header-two, .header-three{
+    display: none;
+  }
+  
+  .header-text {
+    display: block;
+    position: absolute;
+    height: 25vh;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0);
+    font-size: 1em;
+    border-radius: 0;
+    text-align: center;
+    top: 45%;
+  }
+  .main2 {
+    width: 100% !important;
+  }
+  main {
+    display: block !important;
+  }
+  .Sidebar {
+    display: none;
+  }
+  section {
+    padding: 1em;
+  }
+  section.scrumboard {
+    display: none;
+  }
+  footer {
+    display: block !important;
+    width: 100% !important;
+  }
+  .footer-col-1, .footer-col-2 {
+    display: none;
+  }
+  .footer-col-3 {
+    margin-top: 0;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  footer p, footer h3 {
+    text-align: center !important;
+    margin: 0;
+    margin-top: 1em;
+  }
 }

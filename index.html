@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html class="no-js" lang="en">
 <!--<![endif]-->
+
 <head>
   <!--- Basic Page Needs
    ================================================== -->
@@ -15,841 +16,416 @@
     ================================================== -->
   <link rel="stylesheet" href="assets/css/style2.css">
   <link rel="stylesheet" href="assets/css/scrum.css">
-  <link rel="stylesheet" href="assets/css/insta.css">
-  <link rel="stylesheet" href="assets/css/posts.css">
+  <!-- <link rel="stylesheet" href="assets/css/insta.css"> -->
+  <link rel="stylesheet" href="assets/css/projects.css">
   <link rel="stylesheet" href="assets/css/button.css">
-  <link rel="stylesheet" href="assets/css/scroller.css">
+  <!-- <link rel="stylesheet" href="assets/css/scroller.css"> -->
 
-<script src="assets/js/p5.min.js"></script>
+  <script src="assets/js/p5.min.js"></script>
+  <script src = "assets/js/d3/d3.min.js"></script>
 
   <link rel="shortcut icon" href="favicon.png">
 </head>
+
 <body>
-<main>
-  <div class="Sidebar">
-    <nav class="sidebar-holder">
-      <div class="sidebar-inner">
-        <img src="assets/img/logo.png" class="logo">
-      </div>
-      <div class="sidebar-inner">
-        <h3 class="rotate">
-          <a href="http://www.albertsigman.com" target="_blank">Website</a>
-        </h3>
-      </div>
-      <div class="sidebar-inner">
-        <h3 class="rotate">
-              <a href="https://www.linkedin.com/in/albertksigman26/" target="_blank">LinkedIn</a>
-        </h3>
-      </div>
-      <div class="sidebar-inner">
-        <h3 class="rotate">
-          <a href="#projects"> My Projects </a>
-        </h3>
-      </div>
-    </nav>
-  </div>
-  <div class="main2">
-  <div class="header-inner">
+  <main>
+    <div class="Sidebar">
+      <nav class="sidebar-holder"> 
+        <div class="sidebar-inner">
+          <img src="assets/img/logo.png" class="logo">
+        </div>
+        <div class="sidebar-inner">
+          <h3 class="rotate">
+            <a href="http://www.albertsigman.com" target="_blank">Website</a>
+          </h3>
+        </div>
+        <div class="sidebar-inner">
+          <h3 class="rotate">
+            <a href="https://www.linkedin.com/in/albertksigman26/" target="_blank">LinkedIn</a>
+          </h3>
+        </div>
+        <div class="sidebar-inner">
+          <h3 class="rotate">
+            <a href="#projects"> My Projects </a>
+          </h3>
+        </div>
+      </nav>
+    </div>
+    <div class="main2">
+      <div class="header-inner">
 
 
-      <div class="header-one">
+        <div class="header-one">
           <a href="https://github.com/NightingaleMedia" target="_blank">
-        <h2>My Github</h2>
-        </a>
-      </div>
-
-      <div class="header-two">
-        <a href="http://www.albertsigman.com" target="_blank">
-        <h2>My Website</h2>
-      </a>
-      </div>
-      <div class="header-three">
-        <a href="https://www.linkedin.com/in/albertksigman26/" target="_blank">
-        <h2>LinkedIn</h2>
-      </a>
-      </div>
-      <div class="header-text">
-        <h2>Hi, I'm Al.</h2>
-      </div>
-      <header id="header">
-      </header>
-  </div>
-
-
-    <!--======= END HEADER SECTION ======== -->
-    <!--======= BEGIN INSTAGRAM SECTION ======== -->
-
-    <section class="grid-container-insta insta">
-      <div class="Insta-Post">
-        <div class="insta-title">
-          <div class="name-circle">
-            <div class=" gradient-border" id="box">
-              <img src="assets/img/profile.png" class="insta-avatar">
-            </div>
-          </div>
-          <div class="insta-name">
-            <h3>Al Sigman</h3>
-            <h4>Columbus, Ohio</h4>
-          </div>
-          <div class="dots rotate">
-            <h2>...</h2>
-          </div>
-        </div>
-        <div class="instagram-picture">
-          <div class="insta-hover">
-            <div class="hover-text">
-              <h2> Hello World! I'm Al. </h2>
-            </div>
-          </div>
-        </div>
-        <div class="actions">
-          <div>
-            <i class="far fa-heart heart" id="heart"></i>
-          </div>
-          <div>
-            <i class="far fa-comment reverse"></i>
-          </div>
-          <div>
-            <a href="mailto:alsigman@gmail.com" target="_blank">
-          <i class="far fa-paper-plane" ></i>
+            <h2>My Github</h2>
           </a>
-          </div>
-          <div>
-            <i class="far fa-bookmark bookmark" id="bookmark"></i>
-          </div>
         </div>
-        <div class="liked-by">
 
-        </div>
-        <div class="comments">
-          <ul>Al Sigman
-            <li> Since I was a kid I have always loved building things, as I've grown I've learned that
-              building is <i>mostly</i> problem solving.
-              Throughout my career that spans marketing, advertising and urban planning--
-              technology has given me the tools to
-              approach problems with creativity and to build with limitless possibility. </li>
-            <br>
-          </ul>
-        </div>
-      </div>
-    </section>
-
-    <!--======= END Insta Post ======== -->
-    <!--======= BEGIN Insta Post ======== -->
-
-    <section class="grid-container-insta insta">
-      <div class="Insta-Post">
-        <div class="insta-title">
-          <div class="name-circle">
-            <div class=" gradient-border" id="box">
-              <img src="assets/img/profile.png" class="insta-avatar">
-            </div>
-          </div>
-          <div class="insta-name">
-            <h3>Al Sigman</h3>
-            <h4>New York City, New York</h4>
-          </div>
-          <div class="dots rotate">
-            <h2>...</h2>
-          </div>
-        </div>
-        <div class="instagram-picture">
-          <div class="insta-hover">
-            <div class="hover-text">
-              <h2> I like to build things with technology </h2>
-            </div>
-          </div>
-        </div>
-        <div class="actions">
-          <div>
-            <i class="far fa-heart heart" id="heart"></i>
-          </div>
-          <div>
-            <i class="far fa-comment reverse"></i>
-          </div>
-          <div>
-            <a href="mailto:alsigman@gmail.com" target="_blank">
-            <i class="far fa-paper-plane" ></i>
-            </a>
-          </div>
-          <div>
-            <i class="far fa-bookmark bookmark" id="bookmark"></i>
-          </div>
-        </div>
-        <div class="liked-by">
-          <ul>Liked by
-            <li>Panorama Music Festival,</li>
-            <li>HP Innovation,</li>
-            <li>Emily Baltz</li>
-
-          </ul>
-        </div>
-        <div class="comments">
-          <ul>Al Sigman
-            <li> Even though my career has taken me on a journey through different
-              job descriptions, I have always been valued for my acuity with
-              technology.
-              This particular picture comes from
-              <a href="https://vimeo.com/229144600">"The Dream Machine" </a>
-              an interactive and
-              multisensory instrument sponsored by <strong>Hewlitt Packard</strong>.  I helped code the
-              interactivity using Arduinos and Max MSP--using technology to
-              help an artists' creative dream come true.
-           </li>
-            <br>
-          </ul>
-        </div>
-      </div>
-    </section>
-
-    <!--======= END Insta Post ======== -->
-    <!--======= BEGIN Insta Post ======== -->
-
-    <section class="grid-container-insta insta">
-      <div class="Insta-Post">
-        <div class="insta-title">
-          <div class="name-circle">
-            <div class=" gradient-border" id="box">
-              <img src="assets/img/profile.png" class="insta-avatar">
-            </div>
-          </div>
-          <div class="insta-name">
-            <h3>Al Sigman</h3>
-            <h4>Cincinnati, Ohio</h4>
-          </div>
-          <div class="dots rotate">
-            <h2>...</h2>
-          </div>
-        </div>
-        <div class="instagram-picture">
-          <div class="insta-hover">
-            <div class="hover-text">
-              <h2> I like to nerd out. </h2>
-            </div>
-          </div>
-        </div>
-        <div class="actions">
-          <div>
-            <i class="far fa-heart heart" id="heart"></i>
-          </div>
-          <div>
-            <i class="far fa-comment reverse"></i>
-          </div>
-          <div>
-            <a href="mailto:alsigman@gmail.com" target="_blank">
-          <i class="far fa-paper-plane" ></i>
+        <div class="header-two">
+          <a href="http://www.albertsigman.com" target="_blank">
+            <h2>My Website</h2>
           </a>
-          </div>
-          <div>
-            <i class="far fa-bookmark bookmark" id="bookmark"></i>
-          </div>
         </div>
-        <div class="liked-by">
-          <ul>Liked by
-            <li>Cincinnati Arts Center,</li>
-            <li>Sediment Design,</li>
-            <li>Creative Coding</li>
-          </ul>
-        </div>
-        <div class="comments">
-          <ul>Al Sigman
-            <li>I have learned in my career that technology makes anything possible.
-            It can be used to solve difficult problems but also to make new and amazing things.
-            I hacked an XBOX Kinect Sensor and custom coded
-            my own interactive graphics for an art installation.  It took alot of trial and error
-            and reading through libraries, but I was able to make it work despite the odds.
-         </li>
-            <br>
-          </ul>
-        </div>
-      </div>
-    </section>
-
-    <!--======= END Insta Post ======== -->
-    <!--======= BEGIN Insta Post ======== -->
-
-    <section class="grid-container-insta insta">
-      <div class="Insta-Post">
-        <div class="insta-title">
-          <div class="name-circle">
-            <div class=" gradient-border" id="box">
-              <img src="assets/img/profile.png" class="insta-avatar">
-            </div>
-          </div>
-          <div class="insta-name">
-            <h3>Al Sigman</h3>
-            <h4>IU Jacobs School of Music</h4>
-          </div>
-          <div class="dots rotate">
-            <h2>...</h2>
-          </div>
-        </div>
-        <div class="instagram-picture">
-          <div class="insta-hover">
-            <div class="hover-text">
-              <h2> I like to rock out. </h2>
-            </div>
-          </div>
-        </div>
-        <div class="actions">
-          <div>
-            <i class="far fa-heart heart" id="heart"></i>
-          </div>
-          <div>
-            <i class="far fa-comment reverse"></i>
-          </div>
-          <div>
-            <a href="mailto:alsigman@gmail.com" target="_blank">
-          <i class="far fa-paper-plane" ></i>
+        <div class="header-three">
+          <a href="https://www.linkedin.com/in/albertksigman26/" target="_blank">
+            <h2>LinkedIn</h2>
           </a>
-          </div>
-          <div>
-            <i class="far fa-bookmark bookmark" id="bookmark"></i>
-          </div>
         </div>
-        <div class="liked-by">
-          <ul>Liked by
-            <li>Music & Technology,</li>
-            <li>Project Development,</li>
-            <li>Design Process</li>
-          </ul>
+        <div class="header-text">
+          <h2>Hi, I'm Al.</h2>
         </div>
-        <div class="comments">
-          <ul>Al Sigman
-            <li>My lifelong passion for making and producing music has not only
-            informed my coding, but in many ways is responsible for my jump
-          into the world of tech.
-            In college, I studied audio engineering and technology and quickly realized
-          that developing an efficient and elegant final product all come down to process.
-          I believe that my
-      many years as a professional musician has only infomed my ability to be a better coder. </li>
-            <br>
-          </ul>
-        </div>
-      </div>
-    </section>
-
-    <!--======= END Insta Post ======== -->
-    <!--======= BEGIN Insta Post ======== -->
-
-    <section class="grid-container-insta insta">
-      <div class="Insta-Post">
-        <div class="insta-title">
-          <div class="name-circle">
-            <div class=" gradient-border" id="box">
-              <img src="assets/img/profile.png" class="insta-avatar">
-            </div>
-          </div>
-          <div class="insta-name">
-            <h3>Al Sigman</h3>
-            <h4>Tampa, Florida</h4>
-          </div>
-          <div class="dots rotate">
-            <h2>...</h2>
-          </div>
-        </div>
-        <div class="instagram-picture">
-          <div class="insta-hover">
-            <div class="hover-text">
-              <h2> I like to jump in. </h2>
-            </div>
-          </div>
-        </div>
-        <div class="actions">
-          <div>
-            <i class="far fa-heart heart" id="heart"></i>
-          </div>
-          <div>
-            <i class="far fa-comment reverse"></i>
-          </div>
-          <div>
-            <a href="mailto:alsigman@gmail.com" target="_blank">
-          <i class="far fa-paper-plane" ></i>
-          </a>
-          </div>
-          <div>
-            <i class="far fa-bookmark bookmark" id="bookmark"></i>
-          </div>
-        </div>
-        <div class="liked-by">
-          <ul>Liked by
-            <li>Music,</li>
-            <li>Technology,</li>
-            <li>Travel,</li>
-            <li>Reading </li>
-          </ul>
-        </div>
-        <div class="comments">
-          <ul>Al Sigman
-            <li>One thing that has followed me through my whole life is my
-              fearlessness.  I have learned that adapting is second nature to me.
-                I <i>love</i> learning new things and taking on new challenges, whether
-                it's learning a new instrument, mastering a new language or challenging
-                myself with higher level statistics and mathematics.
-                Reach out, and let's make something awesome. </li>
-            <br>
-          </ul>
-        </div>
-      </div>
-    </section>
-
-    <!--======= END INSTAGRAM SECTION ============= -->
-    <!--======= BEGIN SCRUM SKILLS SECTION ======== -->
-
-  <!--======= BEGIN SCRUM SKILLS SECTION ======== -->
-
-  <section class="bg--1 padding-bot">
-    <div class="scrum-head bg--1">
-      <center>
-        <h2 class="bk scrum-header"> My Skillset Scrum Board </h2>
-        <p class="scrum-description">Over the past few years I have slowly been fleshing out a vast technical and creative skillset.  I put some of my 
-          skills to use in developing this interactive scrumboard with vanilla Javascript.  It is a work in progress but the core functionality is there. Give it a shot, click around.
-        </p>
-      </center>
-      <div class="skill-legend">
-
-        <div class="skill-square front-end">
-          <center>Front End</center>
-        </div>
-
-        <div class="skill-square back-end">
-          <center>Back End</center>
-        </div>
-
-        <div class="skill-square creative">
-          <center>Creative</center>
-        </div>
-
-        <div class="skill-square music">
-          <center>Music</center>
-        </div>
-
-        <div class="skill-square other">
-          <center>Other</center>
-        </div>
-        <!-- TODO: Make these dynamic jQuery Check Marks -->
-        <!-- <div class="scrum-checks">
-        <label class="scrum-check-detail">
-        <input type="checkbox">
-        <p>UX / UI</p>
-        <span class="checkbox-custom"></span>
-      </label>
-        <label class="scrum-check-detail">
-        <input type="checkbox">
-        <p>Back End Frameworks</p>
-        <span class="checkbox-custom"></span>
-      </label>
-        <label class="scrum-check-detail">
-        <input type="checkbox">
-        <p>Creative Programming</p>
-        <span class="checkbox-custom"></span>
-      </label>
-        <label class="scrum-check-detail">
-        <input type="checkbox">
-        <p>Embedded Systems</p>
-        <span class="checkbox-custom"></span>
-      </label>
-      </div> -->
-      </div>
-    </div>
-    <div class="skill-scrum">
-      <div class="skill-scrum--board">
-        <div class="skill-scrum--header">
-          <center>
-            <h2>To Do </h2>
-          </center>
-        </div>
-
-
-        <div class="single-skill back-end">
-          <div class="single-skill--content"> Node.js</div>
-
-          <div class="single-skill--drag">
-            <span></span>
-            <span></span>
-            <span></span>
-          </div>
-
-        </div>
-
-        <div class="single-skill back-end">
-          <div class="single-skill--content"> AJAX </div>
-          <div class="single-skill--drag">
-            <span></span>
-            <span></span>
-            <span></span>
-          </div>
-        </div>
-        <div class="single-skill creative">
-          <div class="single-skill--content"> Max MSP</div>
-          <div class="single-skill--drag">
-            <span></span>
-            <span></span>
-            <span></span>
-          </div>
-
-        </div>
-        <div class="single-skill back-end">
-          <div class="single-skill--content">Spring Frameworks</div>
-          <div class="single-skill--drag">
-            <span></span>
-            <span></span>
-            <span></span>
-          </div>
-
-        </div>
-        <div class="single-skill back-end">
-          <div class="single-skill--content"> Hibernate & H2</div>
-          <div class="single-skill--drag">
-            <span></span>
-            <span></span>
-            <span></span>
-          </div>
-        </div>
-        <div class="single-skill front-end">
-          <div class="single-skill--content"> jQuery</div>
-          <div class="single-skill--drag">
-            <span></span>
-            <span></span>
-            <span></span>
-          </div>
-        </div>
-        <div class="single-skill back-end">
-          <div class="single-skill--content"> MVC</div>
-          <div class="single-skill--drag">
-            <span></span>
-            <span></span>
-            <span></span>
-          </div>
-        </div>
-      </div>
-
-      <div class="skill-scrum--board ">
-        <div class="skill-scrum--header">
-          <center>
-            <h2>In Progress </h2>
-          </center>
-        </div>
-
-        <div class="single-skill back-end">
-          <div class="single-skill--content"> Django</div>
-          <div class="single-skill--drag">
-            <span></span>
-            <span></span>
-            <span></span>
-          </div>
-        </div>
-        <div class="single-skill back-end">
-          <div class="single-skill--content"> Python</div>
-          <div class="single-skill--drag">
-            <span></span>
-            <span></span>
-            <span></span>
-          </div>
-        </div>
-        <div class="single-skill creative">
-          <div class="single-skill--content"> Touch Designer</div>
-          <div class="single-skill--drag">
-            <span></span>
-            <span></span>
-            <span></span>
-          </div>
-        </div>
-        <div class="single-skill creative">
-          <div class="single-skill--content"> d3 Data Viz Library</div>
-          <div class="single-skill--drag">
-            <span></span>
-            <span></span>
-            <span></span>
-          </div>
-        </div>
-        <div class="single-skill other">
-          <div class="single-skill--content"> Arduino Programming</div>
-          <div class="single-skill--drag">
-            <span></span>
-            <span></span>
-            <span></span>
-          </div>
-
-        </div>
-        <div class="single-skill other">
-          <div class="single-skill--content">RaspberryPi Programming</div>
-          <div class="single-skill--drag">
-            <span></span>
-            <span></span>
-            <span></span>
-          </div>
-
-        </div>
-        <div class="single-skill front-end">
-          <div class="single-skill--content">Node.js</div>
-          <div class="single-skill--drag">
-            <span></span>
-            <span></span>
-            <span></span>
-          </div>
-        </div>
-
-        <div class="single-skill other">
-          <div class="single-skill--content">Linux Bash</div>
-          <div class="single-skill--drag">
-            <span></span>
-            <span></span>
-            <span></span>
-          </div>
-        </div>
-      </div>
-
-      <div class="skill-scrum--board">
-        <div class="skill-scrum--header">
-          <center>
-            <h2>Mastered </h2>
-          </center>
-        </div>
-
-        <div class="single-skill music">
-          <div class="single-skill--content">Ableton Live</div>
-          <div class="single-skill--drag">
-            <span></span>
-            <span></span>
-            <span></span>
-          </div>
-        </div>
-
-        <div class="single-skill music">
-          <div class="single-skill--content">ProTools</div>
-          <div class="single-skill--drag">
-            <span></span>
-            <span></span>
-            <span></span>
-          </div>
-        </div>
-        <div class="single-skill creative">
-          <div class="single-skill--content">Adobe Full Creative Suite</div>
-          <div class="single-skill--drag">
-            <span></span>
-            <span></span>
-            <span></span>
-          </div>
-        </div>
-
-        <div class="single-skill back-end">
-          <div class="single-skill--content">PHP</div>
-          <div class="single-skill--drag">
-            <span></span>
-            <span></span>
-            <span></span>
-          </div>
-        </div>
-
-        <div class="single-skill front-end">
-          <div class="single-skill--content">Bootstrap / Responsive Design</div>
-          <div class="single-skill--drag">
-            <span></span>
-            <span></span>
-            <span></span>
-          </div>
-        </div>
-        <div class="single-skill front-end">
-          <div class="single-skill--content">HTML5</div>
-          <div class="single-skill--drag">
-            <span></span>
-            <span></span>
-            <span></span>
-          </div>
-        </div>
-        <div class="single-skill front-end">
-          <div class="single-skill--content">CSS3</div>
-          <div class="single-skill--drag">
-            <span></span>
-            <span></span>
-            <span></span>
-          </div>
-        </div>
-        <div class="single-skill back-end">
-          <div class="single-skill--content">Python Essentials</div>
-          <div class="single-skill--drag">
-            <span></span>
-            <span></span>
-            <span></span>
-          </div>
-        </div>
-        <div class="single-skill front-end">
-          <div class="single-skill--content">Javascript Essentials</div>
-          <div class="single-skill--drag">
-            <span></span>
-            <span></span>
-            <span></span>
-          </div>
-        </div>
-        <div class="single-skill back-end">
-          <div class="single-skill--content">Java</div>
-          <div class="single-skill--drag">
-            <span></span>
-            <span></span>
-            <span></span>
-          </div>
-        </div>
-        <div class="single-skill back-end">
-          <div class="single-skill--content">MySQL</div>
-          <div class="single-skill--drag">
-            <span></span>
-            <span></span>
-            <span></span>
-          </div>
-        </div>
-        <div class="single-skill other">
-          <div class="single-skill--content">Git Source Control</div>
-          <div class="single-skill--drag">
-            <span></span>
-            <span></span>
-            <span></span>
-          </div>
-        </div>
+        <header id="header">
+        </header>
       </div>
 
 
-    </div>
+      <!--======= END HEADER SECTION ======== -->
+
+      <!--======= BEGIN Insta Post ======== -->
+
+
+      <!--======= BEGIN SCRUM SKILLS SECTION ======== -->
+  <section class="section__projects">
+    <h1 class="black">Projects</h1>
+  
   </section>
+      <section class="bg--1 padding-bot scrumboard">
+        <div class="scrum-head bg--1">
+          <center>
+            <h2 class="bk scrum-header"> My Skillset Scrum Board </h2>
+            <p class="scrum-description">Over the past few years I have slowly been fleshing out a vast technical and
+              creative skillset. I put some of my
+              skills to use in developing this interactive scrumboard with vanilla Javascript. It is a work in progress
+              but the core functionality is there. Give it a shot, click around.
+            </p>
+          </center>
+          <div class="skill-legend">
 
-    <article class="grid-container-projects" id="projects">
-      <div class="Project">
-        <div class="project-title">
-          <h2> Virtual Pets</h2>
-        </div>
-        <div class="project-about">
-          <h3>About</h3>
-          <p>
-      Virtual Pets was my first project in Java.  We implemented TDD and Agile Development
-      Methodology to create a console application that replicated the popular 1990s electronic
-      toys "Tamagatchis."  This project helped us learn about abstration and polymorphism in object oriented
-      programming.
-          </p>
-        </div>
-        <div class="project-sub-detail">
-          <div class="detail-1">
-            <u>Client</u>
-            <p> We Can Code It </p>
-          </div>
-          <div class="detail-2">
-            <u>Date</u>
-            <p> January, 2020 </p>
-          </div>
-        </div>
-        <div class="project-button">
-          <button class="btn-hover color-7">See It!</button>
-        </div>
-      </div>
-      <div class="Project-Picture">
-        <div class="project-scroller">
-          <div class="scro">
-            <h2 class="ss1 active">Made With :
-              <b class="rotation-wrapper">
-                <span class="s1 active">PHP</span>
-                <span class="s2 ">CSS </span>
-                <span class="s3 ">HTML </span>
-                <span class="s4 ">Java </span>
+            <div class="skill-square front-end">
+              <center>Front End</center>
+            </div>
 
-              </b>
-            </h2>
+            <div class="skill-square back-end">
+              <center>Back End</center>
+            </div>
+
+            <div class="skill-square creative">
+              <center>Creative</center>
+            </div>
+
+            <div class="skill-square music">
+              <center>Music</center>
+            </div>
+
+            <div class="skill-square other">
+              <center>Other</center>
+            </div>
+
           </div>
         </div>
+        <div class="skill-scrum">
+          <div class="skill-scrum--board">
+            <div class="skill-scrum--header">
+              <center>
+                <h2>To Do </h2>
+              </center>
+            </div>
 
-          <img src="assets/img/project1-1.png" alt="project one" class="project-picture-1">
 
-          <img src="assets/img/project1-2.png" alt="project two" class="project-picture-2">
+            <div class="single-skill back-end">
+              <div class="single-skill--content"> Node.js</div>
 
+              <div class="single-skill--drag">
+                <span></span>
+                <span></span>
+                <span></span>
+              </div>
 
-      </div>
-    </article>
+            </div>
 
-    <article class="grid-container-2">
-      <div class="Project-Picture">
-        <div class="project-scroller">
-          <div class="scro">
-            <h2 class="ss1 active">Made With :
-              <b class="rotation-wrapper">
-                <span class="s1 active">PHP</span>
-                <span class="s2 ">CSS </span>
-                <span class="s3 ">HTML </span>
-                <span class="s4 ">Java </span>
+            <div class="single-skill back-end">
+              <div class="single-skill--content"> AJAX </div>
+              <div class="single-skill--drag">
+                <span></span>
+                <span></span>
+                <span></span>
+              </div>
+            </div>
+            <div class="single-skill creative">
+              <div class="single-skill--content"> Max MSP</div>
+              <div class="single-skill--drag">
+                <span></span>
+                <span></span>
+                <span></span>
+              </div>
 
-              </b>
-            </h2>
+            </div>
+            <div class="single-skill back-end">
+              <div class="single-skill--content">Spring Frameworks</div>
+              <div class="single-skill--drag">
+                <span></span>
+                <span></span>
+                <span></span>
+              </div>
+
+            </div>
+            <div class="single-skill back-end">
+              <div class="single-skill--content"> Hibernate & H2</div>
+              <div class="single-skill--drag">
+                <span></span>
+                <span></span>
+                <span></span>
+              </div>
+            </div>
+            <div class="single-skill front-end">
+              <div class="single-skill--content"> jQuery</div>
+              <div class="single-skill--drag">
+                <span></span>
+                <span></span>
+                <span></span>
+              </div>
+            </div>
+            <div class="single-skill back-end">
+              <div class="single-skill--content"> MVC</div>
+              <div class="single-skill--drag">
+                <span></span>
+                <span></span>
+                <span></span>
+              </div>
+            </div>
+          </div>
+
+          <div class="skill-scrum--board ">
+            <div class="skill-scrum--header">
+              <center>
+                <h2>In Progress </h2>
+              </center>
+            </div>
+
+            <div class="single-skill back-end">
+              <div class="single-skill--content"> Django</div>
+              <div class="single-skill--drag">
+                <span></span>
+                <span></span>
+                <span></span>
+              </div>
+            </div>
+            <div class="single-skill back-end">
+              <div class="single-skill--content"> Python</div>
+              <div class="single-skill--drag">
+                <span></span>
+                <span></span>
+                <span></span>
+              </div>
+            </div>
+            <div class="single-skill creative">
+              <div class="single-skill--content"> Touch Designer</div>
+              <div class="single-skill--drag">
+                <span></span>
+                <span></span>
+                <span></span>
+              </div>
+            </div>
+            <div class="single-skill creative">
+              <div class="single-skill--content"> d3 Data Viz Library</div>
+              <div class="single-skill--drag">
+                <span></span>
+                <span></span>
+                <span></span>
+              </div>
+            </div>
+            <div class="single-skill other">
+              <div class="single-skill--content"> Arduino Programming</div>
+              <div class="single-skill--drag">
+                <span></span>
+                <span></span>
+                <span></span>
+              </div>
+
+            </div>
+            <div class="single-skill other">
+              <div class="single-skill--content">RaspberryPi Programming</div>
+              <div class="single-skill--drag">
+                <span></span>
+                <span></span>
+                <span></span>
+              </div>
+
+            </div>
+            <div class="single-skill front-end">
+              <div class="single-skill--content">Node.js</div>
+              <div class="single-skill--drag">
+                <span></span>
+                <span></span>
+                <span></span>
+              </div>
+            </div>
+
+            <div class="single-skill other">
+              <div class="single-skill--content">Linux Bash</div>
+              <div class="single-skill--drag">
+                <span></span>
+                <span></span>
+                <span></span>
+              </div>
+            </div>
+          </div>
+
+          <div class="skill-scrum--board">
+            <div class="skill-scrum--header">
+              <center>
+                <h2>Mastered </h2>
+              </center>
+            </div>
+
+            <div class="single-skill music">
+              <div class="single-skill--content">Ableton Live</div>
+              <div class="single-skill--drag">
+                <span></span>
+                <span></span>
+                <span></span>
+              </div>
+            </div>
+
+            <div class="single-skill music">
+              <div class="single-skill--content">ProTools</div>
+              <div class="single-skill--drag">
+                <span></span>
+                <span></span>
+                <span></span>
+              </div>
+            </div>
+            <div class="single-skill creative">
+              <div class="single-skill--content">Adobe Full Creative Suite</div>
+              <div class="single-skill--drag">
+                <span></span>
+                <span></span>
+                <span></span>
+              </div>
+            </div>
+
+            <div class="single-skill back-end">
+              <div class="single-skill--content">PHP</div>
+              <div class="single-skill--drag">
+                <span></span>
+                <span></span>
+                <span></span>
+              </div>
+            </div>
+
+            <div class="single-skill front-end">
+              <div class="single-skill--content">Bootstrap / Responsive Design</div>
+              <div class="single-skill--drag">
+                <span></span>
+                <span></span>
+                <span></span>
+              </div>
+            </div>
+            <div class="single-skill front-end">
+              <div class="single-skill--content">HTML5</div>
+              <div class="single-skill--drag">
+                <span></span>
+                <span></span>
+                <span></span>
+              </div>
+            </div>
+            <div class="single-skill front-end">
+              <div class="single-skill--content">CSS3</div>
+              <div class="single-skill--drag">
+                <span></span>
+                <span></span>
+                <span></span>
+              </div>
+            </div>
+            <div class="single-skill back-end">
+              <div class="single-skill--content">Python Essentials</div>
+              <div class="single-skill--drag">
+                <span></span>
+                <span></span>
+                <span></span>
+              </div>
+            </div>
+            <div class="single-skill front-end">
+              <div class="single-skill--content">Javascript Essentials</div>
+              <div class="single-skill--drag">
+                <span></span>
+                <span></span>
+                <span></span>
+              </div>
+            </div>
+            <div class="single-skill back-end">
+              <div class="single-skill--content">Java</div>
+              <div class="single-skill--drag">
+                <span></span>
+                <span></span>
+                <span></span>
+              </div>
+            </div>
+            <div class="single-skill back-end">
+              <div class="single-skill--content">MySQL</div>
+              <div class="single-skill--drag">
+                <span></span>
+                <span></span>
+                <span></span>
+              </div>
+            </div>
+            <div class="single-skill other">
+              <div class="single-skill--content">Git Source Control</div>
+              <div class="single-skill--drag">
+                <span></span>
+                <span></span>
+                <span></span>
+              </div>
+            </div>
           </div>
         </div>
-        <div class="project-picture-1"></div>
-        <div class="project-picture-2"></div>
-        <div class="project-picture-3"></div>
-      </div>
-      <div class="Project">
-        <div class="project-title">
-          <h2> Virtual Pets</h2>
-        </div>
-        <div class="project-title-2">
-          &nbsp
-        </div>
-        <div class="project-about">
-          <h3>About</h3>
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do ei usmod ltempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure
-            dolor in reprehenderit in voluptate velit esse cillum
-          </p>
-        </div>
-        <div class="project-sub-detail">
-          <div class="detail-1"><u>Client</u>
-            <p>WCCI</p>
-          </div>
-          <div class="detail-2"><u>Date</u>
-            <p> January, 2020</p>
-          </div>
-        </div>
-        <div class="project-button">
-          <button class="btn-hover color-9">See It!</button>
-        </div>
-      </div>
-    </article>
-  </div>
-</main>
+      </section>
 
-<footer>
-<div class="footer-col-1">
+   
+    </div>
+  </main>
 
-  <img src="assets/img/insta0.png" alt="project picture" class="footer-img">
-  <img src="assets/img/insta1.png" alt="project picture" class="footer-img">
-  <img src="assets/img/insta4.png" alt="project picture" class="footer-img">
-  <h3>About This Site </h3>
-  <p>As I keep rolling out changes on this site, I hope you'll stay in touch.
-    I am always looking for collaborators, inspiration or feedback. Drop a line,
-    suggest a book, sing me a song, you're the piano man.</p>
-</div>
-<div class="footer-col-2">
+  <footer>
+    <div class="footer-col-1">
 
-</div>
+      <img src="assets/img/insta0.png" alt="project picture" class="footer-img">
+      <img src="assets/img/insta1.png" alt="project picture" class="footer-img">
+      <img src="assets/img/insta4.png" alt="project picture" class="footer-img">
+      <h3>About This Site </h3>
+      <p>As I keep rolling out changes on this site, I hope you'll stay in touch.
+        I am always looking for collaborators, inspiration or feedback. Drop a line,
+        suggest a book, sing me a song, you're the piano man.</p>
+    </div>
+    <div class="footer-col-2">
 
-<div class="footer-col-3">
-  <h3>Contact</h3>
-  <p> alsigman@gmail.com <br>
-      www.albertsigman.com
-    </p><p class="logos">
-    <i class="fab fa-instagram "></i>
-    <i class="fab fa-medium "> </i>
-    <i class="fab fa-linkedin "></i>
-  </p>
-</div>
-<div class="tagline">
+    </div>
+
+    <div class="footer-col-3">
+      <h3>Contact</h3>
+    <p> alsigman@gmail.com <br>
+        www.albertsigman.com
+      </p>
+       
+      <p class="logos">
+        <i class="fab fa-instagram "></i>
+        <i class="fab fa-medium "> </i>
+        <i class="fab fa-linkedin "></i>
+      </p>
+ 
+    </div>
+    <div class="tagline">
 
 
-</div>
-</footer>
+    </div>
+  </footer>
 
 </body>
 
 <script src="https://kit.fontawesome.com/e36e4d0b19.js" crossorigin="anonymous"></script>
-
-<script src="assets/js/jquery.min.js"></script>
+<script src="assets/js/project-builder.js"></script>
+<!-- <script src="assets/js/jquery.min.js"></script> -->
 <script src="assets/js/scrum.js"></script>
-<script src="assets/js/scroller.js"></script>
+<!-- <script src="assets/js/scroller.js"></script> -->
 <script src="assets/js/charts.js" type="text/javascript"></script>
 <script src="assets/js/style.js"></script>
 <script src="assets/js/insta-content.js"></script>

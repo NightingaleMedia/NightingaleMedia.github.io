@@ -1,5 +1,5 @@
 
-
+const header = document.querySelector('.header-inner')
 var stars = [],
     WIDTH = window.innerWidth,
     HEIGHT = window.innerHeight,
