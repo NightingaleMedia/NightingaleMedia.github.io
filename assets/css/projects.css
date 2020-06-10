@@ -1,7 +1,11 @@
 @media screen and (max-width: 600px) {
+    .section__projects>article {
+        max-height: 100vh !important;
+    }
     article {
         grid-template-columns: 1fr !important;
-        grid-template-rows: 20px 340px 20fr;
+        grid-template-rows: 20px 340px 1fr;
+        /* max-height: 900px; */
     }
     .single__project--text h3 {
         font-size: 1.75em !important;
@@ -9,26 +13,27 @@
         margin-bottom: 0 !important;
     }
     .single__project--text p, .single__project--text div.single__project--list {
-        font-size: 1.25em !important;
+        font-size: 1em !important;
     }
     .single__project--tag {
         border-radius: 0% !important;
     }
 }
 
-section.section__projects{
+section.section__projects {
     background-color: #f7f7f7;
     padding-bottom: 3em;
 }
+
 section.section__projects h3, section.section__projects p {
     margin: 0;
     padding: 0;
-
 }
 
 section.section__projects h1 {
     padding-top: 1.5em;
     padding-bottom: 1.5em;
+    margin-top: -1.5em;
 }
 
 .section__projects>article {
@@ -43,9 +48,11 @@ section.section__projects h1 {
     grid-template-columns: 5% 46% 49%;
     margin-bottom: 250px;
 }
-.single__project{
-    background-color: rgba(0,0,0,0) !important;
+
+.single__project {
+    background-color: rgba(0, 0, 0, 0) !important;
 }
+
 .single__project--tag {
     height: 100%;
     width: 100%;
@@ -132,6 +139,10 @@ section.section__projects h1 {
     opacity: 0 !important;
 }
 
+.proj-shifted span {
+    opacity: 0 !important;
+}
+
 .proj-shifted .single__project--list>span {
     opacity: 0 !important;
 }
@@ -152,20 +163,30 @@ section.section__projects h1 {
     transition-delay: 0.2s;
 }
 
+.single__project--text p {
+    margin-top: -0.5em !important;
+    margin-bottom: 1em !important;
+}
+
 .single__project--desc {
     font-family: 'Courier New', Courier, monospace;
     font-size: 1.25em !important;
     /* justify-self: end !important; */
-    line-height: 1.5em;
+    line-height: 1.25em;
     margin-top: auto !important;
 }
 
-.single__project--desc span {
+.single__project--button {
     background-color: #181818;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 1.25em !important;
+    /* margin-top: 0.5em; */
     padding: 2px;
+    width: 33%;
+    text-align: center;
 }
 
-.single__project--desc span a {
+.single__project--button a {
     font-weight: 900 !important;
     color: white;
     text-decoration: none;
@@ -178,7 +199,11 @@ section.section__projects h1 {
 
 .single__project--list>span {
     background-color: azure;
-    padding: 4px;
+    padding: 0px;
     margin: 5px;
     line-height: 50px;
+}
+
+.single__project--list>span:first-of-type {
+    margin-left: 0;
 }

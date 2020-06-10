@@ -18,8 +18,11 @@ class ProjectBuilder {
         <h3>${project.title}</h3>
         <p>${project.date}</p>
         <p class="single__project--desc">${project.desc}
-        <br>
-          <span><a href="${project.liveLink}"> See it Live </a></span></p>
+        </p>
+          <span class="single__project--button">
+          <a href="${project.liveLink}"> See it Live </a>
+          </span>
+         
         <div class="single__project--list">
           ${this.spans}
         </div>
@@ -58,6 +61,7 @@ const parse = async ()=>{
             'date' : d.Date,
             'desc' : d.Description,
             'picLink' : d.PicLink,
+            'liveLink' : d.LiveLink,
             'category' : d.Category,
             'tags' : d.Tags
         };
