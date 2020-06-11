@@ -1,11 +1,20 @@
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 694px) {
     .section__projects>article {
         max-height: 100vh !important;
+        max-width: 690px;
     }
     article {
         grid-template-columns: 1fr !important;
-        grid-template-rows: 20px 340px 1fr;
+        grid-template-rows: 20px 379px 1fr;
         /* max-height: 900px; */
+    }
+    .single__project--picture {
+        background-size: contain;
+        right: 10px !important;
+        height: 360px !important; 
+        width: 360px !important;
+        background-origin: border-box;
+        background-clip: border-box;
     }
     .single__project--text h3 {
         font-size: 1.75em !important;
@@ -17,6 +26,10 @@
     }
     .single__project--tag {
         border-radius: 0% !important;
+    }
+    .single__project--button{
+        width: 100% !important;
+       
     }
 }
 
@@ -70,11 +83,23 @@ section.section__projects h1 {
     position: relative;
     height: 100%;
     width: 100%;
+
+}
+
+.single__project--picture {
+    position: absolute;
+    height: 392px;
+    width: 375px;
+    right: 4px;
+    background-size:cover;
+    background-repeat: no-repeat;
+    background-clip: content-box;
+    background-position: center;
 }
 
 .single__project--picture-wrap>span {
     position: absolute;
-    left: 27px;
+    left: 7.5%;
     height: 10%;
     width: 4px;
     border-radius: 10px;
@@ -88,13 +113,6 @@ section.section__projects h1 {
 
 .single__project--picture-wrap>span:nth-of-type(2) {
     transform: rotate(45deg);
-}
-
-.single__project--picture {
-    position: absolute;
-    max-height: 97%;
-    max-width: 97%;
-    right: 6px;
 }
 
 .single__project--bg {
@@ -132,14 +150,14 @@ section.section__projects h1 {
 }
 
 .proj-shifted>.single__project--text {
-    transform: translate(-360px, 0) rotate(90deg) !important;
+    transform: translate(-75%, 0) rotate(90deg) !important;
 }
 
 .proj-shifted>.single__project--text p {
     opacity: 0 !important;
 }
 
-.proj-shifted span {
+.proj-shifted>.single__project--text>span {
     opacity: 0 !important;
 }
 

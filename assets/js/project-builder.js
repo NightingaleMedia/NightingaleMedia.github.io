@@ -11,7 +11,7 @@ class ProjectBuilder {
         <div class="single__project--picture-wrap">
           <span></span>
           <span></span>
-          <img class="single__project--picture" src="assets/img/projects/${project.picLink}" alt="${project.picLink}">
+          <div class="single__project--picture" style="background-image: url('assets/img\/projects\/${project.picLink}');" alt="${project.picLink}"></div>
         </div>
       </div>
       <div class="single__project--text">

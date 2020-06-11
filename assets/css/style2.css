@@ -398,7 +398,7 @@ footer i {
 
 /* At the top level of your code */
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 1096px) {
   body {
     position: relative;
   }
