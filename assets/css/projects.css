@@ -8,13 +8,16 @@
         grid-template-rows: 20px 379px 1fr;
         /* max-height: 900px; */
     }
+    .single__project--bg {
+        overflow: auto;
+    }
     .single__project--picture {
-        background-size: contain;
+        
+        position: relative !important;
         right: 10px !important;
-        height: 360px !important; 
+        height: 360px !important;
         width: 360px !important;
-        background-origin: border-box;
-        background-clip: border-box;
+    
     }
     .single__project--text h3 {
         font-size: 1.75em !important;
@@ -27,9 +30,8 @@
     .single__project--tag {
         border-radius: 0% !important;
     }
-    .single__project--button{
+    .single__project--button {
         width: 100% !important;
-       
     }
 }
 
@@ -83,7 +85,6 @@ section.section__projects h1 {
     position: relative;
     height: 100%;
     width: 100%;
-
 }
 
 .single__project--picture {
@@ -91,7 +92,7 @@ section.section__projects h1 {
     height: 392px;
     width: 375px;
     right: 4px;
-    background-size:cover;
+    background-size: cover;
     background-repeat: no-repeat;
     background-clip: content-box;
     background-position: center;
