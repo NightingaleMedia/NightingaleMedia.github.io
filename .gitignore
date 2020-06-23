@@ -1,4 +1,7 @@
-assets/img/*
+*.gif
+*.png
+*.jpg
+
 .DS_Store
 delete.html
 duplicate.html
