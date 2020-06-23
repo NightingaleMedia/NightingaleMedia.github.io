@@ -48,6 +48,7 @@ class ProjectBuilder {
         }
         return colors[category];
     }
+    
 
     render(){
         return this.article;

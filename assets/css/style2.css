@@ -1,5 +1,4 @@
 @import url('assets/fonts/Raleway');
-
 html {
   width: 100%;
 }
@@ -38,13 +37,52 @@ h3 {
   font-weight: 10;
   color: grey;
 }
-.black{
+
+#preloader {
+  position: absolute;
+  transition:  all 0.5s ease;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100vh;
+  width: 100%;
+  background-color: white;
+  z-index: 100;
+}
+
+.preloader-inner {
+  width: min-content;
+  margin-left: auto;
+  margin-right: auto;
+  z-index: 100;
+}
+
+.preloader-loaded {
+  width: 50%;
+  position: absolute;
+  height: 100vh;
+  background-color: #f5eaff;
+  z-index: 50;
+}
+
+.loaded{
+  transform: translateY(-100%);
+
+}
+
+.preloader-pic {
+  z-index: 200;
+  background-blend-mode: overlay;
+}
+
+.black {
   color: #181818;
 }
+
 .header-inner {
   display: grid;
   grid-template: repeat(24, 1fr) / repeat(24, 1fr);
-  max-height: 980px;
+  max-height: 900px;
 }
 
 .header-inner a {
@@ -107,7 +145,7 @@ header#header {
 .header-text {
   grid-column: 2/20;
   grid-row: 2;
-  font-size: 3em;
+  font-size: 1.5em !important;
 }
 
 .grid-container-projects {
@@ -409,10 +447,9 @@ footer i {
     height: 100vh;
     position: relative;
   }
-  .header-one, .header-two, .header-three{
+  .header-one, .header-two, .header-three {
     display: none;
   }
-  
   .header-text {
     display: block;
     position: absolute;
