@@ -1,24 +1,34 @@
 const preloader = document.querySelector('#preloader')
 let i = 0;
+let loadedBool = false;
 const perfData = performance.getEntries(0);
+const loaded = document.querySelector('.preloader-loaded')
 
-function updatePercentage(p){
-    const loaded = document.querySelector('.preloader-loaded')
-    if(p > 100){ 
-         loaded.style.width = `100%`
+function updatePercentage(p) {
+
+    if (p > 100) {
+        loaded.style.width = `100%`
         loaded.firstElementChild.innerText = `Not Exactly The Best Connection...`
     } else {
-          loaded.firstElementChild.innerText = `${p}%`
-          loaded.style.width = `${p}%`
+        loaded.firstElementChild.innerText = `${p}%`
+        loaded.style.width = `${p}%`
     }
 }
 
-setInterval(()=>{
-    updatePercentage(i)
+setInterval(() => {
+    loadedBool ? null : updatePercentage(i);
     i++
 }, 100)
 
-window.addEventListener('load', ()=>{
-    const preloader = document.querySelector('#preloader')
-    preloader.classList.add('loaded')
+window.addEventListener('load', () => {
+    loadedBool = true;
+ const preloader = document.querySelector('#preloader')
+    loaded.firstElementChild.innerText = `Hi, I'm Al`
+    loaded.style.width = `100%`
+   
+    setTimeout(() => {
+  
+        preloader.classList.add('loaded')
+    }, 1500)
+
 })
