@@ -11,27 +11,14 @@ function updatePercentage(p){
           loaded.firstElementChild.innerText = `${p}%`
           loaded.style.width = `${p}%`
     }
-  
-
 }
 
 setInterval(()=>{
- 
-    // let estTime = (perfData.loadEventEnd - perfData.navigationStart);
-    // let time = parseInt((estTime / 100) % 60) * 100;
-    console.log(perfData)
- 
     updatePercentage(i)
     i++
 }, 100)
 
-
-    // preloader.innerHTML = `<h1 class="black">${time}</h1>`
-
-
 window.addEventListener('load', ()=>{
     const preloader = document.querySelector('#preloader')
-
     preloader.classList.add('loaded')
-
 })
