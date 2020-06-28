@@ -110,7 +110,6 @@ function handleArticles() {
                 })
         }
     })
-
 }
 
 window.onload = function(){
