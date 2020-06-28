@@ -27,8 +27,8 @@ window.addEventListener('load', () => {
     loaded.style.width = `100%`
    
     setTimeout(() => {
-  
         preloader.classList.add('loaded')
+        window.scrollTo(0,0)    
     }, 1500)
 
 })
