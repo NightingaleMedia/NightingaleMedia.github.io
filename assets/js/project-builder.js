@@ -1,17 +1,21 @@
-
-
 class ProjectBuilder {
-    constructor(project){
+    constructor(project) {
         this.article = document.createElement('article');
+        this.bg = 'placeholder.gif'
         this.article.className = 'single__project proj-shifted';
         this.color = this.getColor(project.category);
         this.spans = this.buildSpans(project.tags);
+        this.picBgWrapper = document.createElement('div');
+        this.picBg = document.createElement('div');
+        this.picBg.className = 'single__project--picture';
+        this.picBg.style.backgroundImage = `url('assets/img/projects/${this.bg}')`;
+        this.picBgWrapper.appendChild(this.picBg)
         this.article.innerHTML = `<div class="single__project--tag" style="background-color:${this.color};"></div>
       <div class="single__project--bg">
         <div class="single__project--picture-wrap">
           <span></span>
           <span></span>
-          <div class="single__project--picture" style="background-image: url('assets/img\/projects\/${project.picLink}');" alt="${project.picLink}"></div>
+         ${this.picBgWrapper.innerHTML}
         </div>
       </div>
       <div class="single__project--text">
@@ -29,7 +33,7 @@ class ProjectBuilder {
       </div>`
     }
 
-    buildSpans(tags){
+    buildSpans(tags) {
         let tagList = tags.split('|');
         let spans = [];
         tagList.forEach(tag => {
@@ -38,7 +42,7 @@ class ProjectBuilder {
         return spans.join('');
     }
 
-    getColor(category){
+    getColor(category) {
         let colors = {
             'frontend': '#a80fdf',
             'backend': '#ff204b',
@@ -48,23 +52,32 @@ class ProjectBuilder {
         }
         return colors[category];
     }
-    
 
-    render(){
+    getAsyncBg(picLink) {
+        let placeholder = new Image();
+        placeholder.src = `assets/img/projects/${picLink}`;
+        placeholder.onload = ()=>{this.updateImage(picLink)};
+    }
+
+    updateImage(p){
+        let image = this.article.querySelector('.single__project--picture')
+        image.style.backgroundImage = `url('assets/img/projects/${p}')`
+    }
+    render() {
         return this.article;
     }
 }
-const parse = async ()=>{ 
+const parse = async () => {
     let url = 'https://docs.google.com/spreadsheets/d/e/2PACX-1vSbtgf0y6rmYI-lg4tCbelwoK0IshswVbW_F519K6xXpk-HYJo71c3ShxoQcZ-5B8fZHDhF9_h_AtwA/pub?output=csv';
-    return await d3.dsv(',', url , function(d){
-        return{
-            'title' : d.Title,
-            'date' : d.Date,
-            'desc' : d.Description,
-            'picLink' : d.PicLink,
-            'liveLink' : d.LiveLink,
-            'category' : d.Category,
-            'tags' : d.Tags
+    return await d3.dsv(',', url, function (d) {
+        return {
+            'title': d.Title,
+            'date': d.Date,
+            'desc': d.Description,
+            'picLink': d.PicLink,
+            'liveLink': d.LiveLink,
+            'category': d.Category,
+            'tags': d.Tags
         };
     }).then(result => result);
 }
@@ -73,32 +86,32 @@ parse()
     .then(ans => build(ans))
     .then(handleArticles)
 
-function build(items){
+function build(items) {
     const section = document.querySelector('.section__projects')
-   items.forEach(item => {
-       let itemBuild = new ProjectBuilder(item);
-       section.append(itemBuild.render());
-   })
+    items.forEach(item => {
+        let itemBuild = new ProjectBuilder(item);
+        // itemBuild.getAsyncBg(item.picLink);
+        section.append(itemBuild.render());
+    })
 }
 
 
-function handleArticles(){
+function handleArticles() {
     const articleProject = document.querySelectorAll('.section__projects > article')
 
     articleProject.forEach(article => {
         if (window.innerWidth < 900) {
             article.classList.remove('proj-shifted')
-        } else { 
-    article.querySelector('.single__project--bg')
-        .addEventListener('click', function () {
-            if(window.innerWidth < 900){
-                return;
-            } else { 
-            this.parentElement.classList.toggle('proj-shifted')
-            }
-        })
-    }
-})
-    
-}
+        } else {
+            article.querySelector('.single__project--bg')
+                .addEventListener('click', function () {
+                    if (window.innerWidth < 900) {
+                        return;
+                    } else {
+                        this.parentElement.classList.toggle('proj-shifted')
+                    }
+                })
+        }
+    })
 
+}
