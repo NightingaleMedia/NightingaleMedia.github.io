@@ -1,21 +1,23 @@
 class ProjectBuilder {
     constructor(project) {
         this.article = document.createElement('article');
-        this.bg = 'placeholder.gif'
+   
         this.article.className = 'single__project proj-shifted';
         this.color = this.getColor(project.category);
         this.spans = this.buildSpans(project.tags);
-        this.picBgWrapper = document.createElement('div');
-        this.picBg = document.createElement('div');
-        this.picBg.className = 'single__project--picture';
-        this.picBg.style.backgroundImage = `url('assets/img/projects/${this.bg}')`;
-        this.picBgWrapper.appendChild(this.picBg)
+    
         this.article.innerHTML = `<div class="single__project--tag" style="background-color:${this.color};"></div>
       <div class="single__project--bg">
-        <div class="single__project--picture-wrap">
+        <div class="single__project--picture-wrap" >
           <span></span>
           <span></span>
-         ${this.picBgWrapper.innerHTML}
+          <div class="single__project--picture" id="${project.picLink}">
+          <div class="loading-picture">
+            <span></span>
+            <span></span>
+          </div>
+          </div>
+
         </div>
       </div>
       <div class="single__project--text">
@@ -53,11 +55,6 @@ class ProjectBuilder {
         return colors[category];
     }
 
-    getAsyncBg(picLink) {
-        let placeholder = new Image();
-        placeholder.src = `assets/img/projects/${picLink}`;
-        placeholder.onload = ()=>{this.updateImage(picLink)};
-    }
 
     updateImage(p){
         let image = this.article.querySelector('.single__project--picture')
@@ -114,4 +111,16 @@ function handleArticles() {
         }
     })
 
+}
+
+window.onload = function(){
+    let allPics = document.querySelectorAll('.single__project--picture')
+    allPics.forEach(pic => {
+        let loading = new Image();
+        loading.src = `assets/img/projects/${pic.id}`
+        loading.onload = function(){
+            pic.style.backgroundImage = `url('assets/img/projects/${pic.id}')`;
+            pic.innerHTML = ``;
+        }
+    })
 }
