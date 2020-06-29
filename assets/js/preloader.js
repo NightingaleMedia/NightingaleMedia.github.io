@@ -18,7 +18,7 @@ function updatePercentage(p) {
 setInterval(() => {
     loadedBool ? null : updatePercentage(i);
     i++
-}, 200)
+}, 80)
 
 window.addEventListener('load', () => {
     loadedBool = true;
