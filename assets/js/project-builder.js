@@ -14,7 +14,7 @@ class ProjectBuilder {
           <div class="single__project--picture" id="${project.picLink}">
           <div class="loading-picture">
             <span></span>
-            <span></span>
+            <span>Loading. . . </span>
           </div>
           </div>
 

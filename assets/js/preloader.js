@@ -6,12 +6,12 @@ const loaded = document.querySelector('.preloader-loaded')
 
 function updatePercentage(p) {
 
-    if (p > 100) {
+    if (p > 90) {
         loaded.style.width = `100%`
         loaded.firstElementChild.innerText = `Not Exactly The Best Connection...`
     } else {
         loaded.firstElementChild.innerText = `${p}%`
-        loaded.style.width = `${p}%`
+        loaded.style.width = `${p + 10}%`
     }
 }
 
@@ -27,7 +27,7 @@ window.addEventListener('load', () => {
     loaded.style.width = `100%`
    
     setTimeout(() => {
-        preloader.classList.add('loaded')
+        // preloader.classList.add('loaded')
         window.scrollTo(0,0)    
     }, 1500)
 

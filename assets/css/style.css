@@ -58,6 +58,7 @@ h3 {
 }
 
 .preloader-loaded {
+  width: 10%;
   position: absolute;
   height: 100vh;
   transition: width 0.2s ease;
@@ -82,7 +83,6 @@ h3 {
   position: relative;
   display: flex;
   align-items: center;
-
 }
 
 .loading-picture span:nth-of-type(1) {
@@ -92,16 +92,19 @@ h3 {
   animation: loading 1.5s infinite;
 }
 
-
+.loading-picture span:nth-of-type(2) {
+  margin-left: 35%;
+  font-size: 2em;
+  z-index: 100;
+  color: #c3c3c3;
+}
 
 @keyframes loading {
   0% {
     width: 0%;
     opacity: 1;
-  
   }
   80% {
-
     opacity: 0.8;
   }
   100% {
