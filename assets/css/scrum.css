@@ -56,7 +56,8 @@ main {
 }
 
 .skill-scrum--board {
-    
+    border-top-left-radius: 25px;
+    border-top-right-radius: 25px;
     padding: 0;
     display: flex;
     flex-direction: column;
@@ -225,12 +226,12 @@ cursor : grabbing !important;
     background-color: #f78e1e;
 }
 
-.front-end {
+.frontend {
     background-color: purple;
     color: white;
 }
 
-.back-end {
+.backend {
     background-color: #f1344d;
 }
 
