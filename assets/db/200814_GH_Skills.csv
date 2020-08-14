@@ -1,0 +1,36 @@
+Skill,Mastery,Category
+Max MSP,todo,Creative
+PostGres Server,inprogress,Backend
+AWS Suite,mastered,Backend
+Dart,todo,Other
+Firebase,inprogress,Backend
+MVC,mastered,Backend
+Node.js,todo,Backend
+Django / Django REST Framework,inprogress,Backend
+Touch Designer,todo,Creative
+d3 Data Viz,todo,Frontend
+Spark AR,todo,Other
+Raspberry Pi Programming,todo,Other
+Linux/Bash,mastered,Backend
+Spring Framework / Spring Boot,mastered,Backend
+Ableton Live,mastered,Music
+ProTools,mastered,Music
+Adobe Creative Suite,mastered,Creative
+PHP and PHP for Wordpress,mastered,Backend
+Bootstrap / Responsive Design,mastered,Frontend
+HTML 5 / CSS,mastered,Frontend
+Python,mastered,Backend
+Javascript,mastered,Frontend
+Java ,mastered,Backend
+MySQL,mastered,Backend
+3DS Max,todo,Other
+Swift,todo,Other
+Git Source Control,mastered,Other
+Angular,todo,Frontend
+GoLang,todo,Backend
+Express.js,inprogress,Backend
+GraphQL,inprogress,Backend
+Apollo Client,inprogress,Frontend
+Next.js,inprogress,Backend
+React.js,mastered,Frontend
+SCSS/Sass,mastered,Frontend   

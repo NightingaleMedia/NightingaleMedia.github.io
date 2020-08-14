@@ -223,16 +223,17 @@ cursor : grabbing !important;
 
 
 .music {
-    background-color: #f78e1e;
+    background-color: #e69c4e;
 }
 
 .frontend {
-    background-color: purple;
+    background-color: #269863;
     color: white;
 }
 
 .backend {
-    background-color: #f1344d;
+    background-color: #5f0f6f;
+    color: white;
 }
 
 .creative {

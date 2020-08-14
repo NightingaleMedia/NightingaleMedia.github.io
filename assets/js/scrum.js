@@ -4,8 +4,6 @@ const skillSquare = document.querySelectorAll('.skill-square')
 
 
 function buildSkills(skills){
-    
-
     function findBoardFromSkill(skill){
         const board = document.querySelector(`[data-mastery=${skill.mastery}]`)
         return board;
@@ -49,8 +47,10 @@ function buildSkills(skills){
             })
         })
     }
+
+
 const parseSkills = async () => {
-    let url = 'https://docs.google.com/spreadsheets/d/e/2PACX-1vSbtgf0y6rmYI-lg4tCbelwoK0IshswVbW_F519K6xXpk-HYJo71c3ShxoQcZ-5B8fZHDhF9_h_AtwA/pub?output=csv&gid=1872270793';
+    let url = 'assets/db/200814_GH_Skills.csv';
     return await d3.dsv(',', url, function (d) {
         return {
             'skill': d.Skill,
@@ -124,9 +124,9 @@ draggers.forEach(sticky => {
 })
 } 
 
-
 parseSkills()
-    .then(ans => buildSkills(ans))
+.then(ans => buildSkills(ans))
+
 
 
    

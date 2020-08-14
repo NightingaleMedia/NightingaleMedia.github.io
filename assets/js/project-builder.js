@@ -65,7 +65,7 @@ class ProjectBuilder {
     }
 }
 const parse = async () => {
-    let url = 'https://docs.google.com/spreadsheets/d/e/2PACX-1vSbtgf0y6rmYI-lg4tCbelwoK0IshswVbW_F519K6xXpk-HYJo71c3ShxoQcZ-5B8fZHDhF9_h_AtwA/pub?output=csv';
+    let url = 'assets/db/200814_GH_Projects.csv';
     return await d3.dsv(',', url, function (d) {
         return {
             'title': d.Title,
@@ -84,6 +84,7 @@ parse()
     .then(handleArticles)
 
 function build(items) {
+    console.log(items)
     const section = document.querySelector('.section__projects')
     items.forEach(item => {
         let itemBuild = new ProjectBuilder(item);
@@ -117,6 +118,7 @@ window.onload = function(){
     allPics.forEach(pic => {
         let loading = new Image();
         loading.src = `assets/img/projects/${pic.id}`
+        
         loading.onload = function(){
             pic.style.backgroundImage = `url('assets/img/projects/${pic.id}')`;
             pic.innerHTML = ``;
