@@ -55,10 +55,10 @@ class ProjectBuilder {
     return colors[category];
   }
 
-  updateImage(p) {
-    let image = this.article.querySelector(".single__project--picture");
-    image.style.backgroundImage = `url('assets/img/projects/${p}')`;
-  }
+  //   updateImage(p) {
+  //     let image = this.article.querySelector(".single__project--picture");
+  //     image.style.backgroundImage = `url('assets/img/projects/${p}')`;
+  //   }
   render() {
     return this.article;
   }
@@ -80,12 +80,7 @@ const parse = async () => {
     .then((result) => result);
 };
 
-parse()
-  .then((ans) => build(ans))
-  .then(handleArticles);
-
-function build(items) {
-  console.log(items);
+async function build(items) {
   const section = document.querySelector(".section__projects");
   items.forEach((item) => {
     let itemBuild = new ProjectBuilder(item);
@@ -116,15 +111,23 @@ function handleArticles() {
   });
 }
 
-window.onload = function () {
+async function handleLoad() {
+  console.log("loaded");
   let allPics = document.querySelectorAll(".single__project--picture");
   allPics.forEach((pic) => {
+    console.log(pic);
+
     let loading = new Image();
     loading.src = `assets/img/projects/${pic.id}`;
 
     loading.onload = function () {
-      pic.style.backgroundImage = `url('assets/img/projects/${pic.id}')`;
       pic.innerHTML = ``;
+      pic.style.backgroundImage = `url("assets/img/projects/${pic.id}")`;
     };
   });
-};
+}
+
+parse()
+  .then((ans) => build(ans))
+  .then(handleArticles)
+  .then(handleLoad);
