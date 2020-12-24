@@ -1,10 +1,9 @@
-
-const header = document.querySelector('.header-inner')
+const header = document.querySelector(".header-inner");
 var stars = [],
-    WIDTH = window.innerWidth,
-    HEIGHT = window.innerHeight,
-    FPS = 24, // Frames per second
-    NUM_STARS = WIDTH; // Number of stars
+  WIDTH = window.innerWidth - 115,
+  HEIGHT = window.innerHeight,
+  FPS = 24, // Frames per second
+  NUM_STARS = WIDTH; // Number of stars
 
 function setup() {
   var header = createCanvas(WIDTH, HEIGHT);
@@ -16,16 +15,16 @@ function setup() {
       y: 0,
       offset: Math.random() * 360,
       // Weight orbit a little to be outside origin
-      orbit: (Math.random()+0.01) * max(WIDTH, HEIGHT),
+      orbit: (Math.random() + 0.01) * max(WIDTH, HEIGHT),
       radius: Math.random() * 2,
       vx: Math.floor(Math.random() * 10) - 5,
-      vy: Math.floor(Math.random() * 10) - 5
+      vy: Math.floor(Math.random() * 10) - 5,
     });
   }
 
   frameRate(FPS);
   loop();
-   header.parent("header");
+  header.parent("header");
 }
 
 function draw() {
@@ -33,7 +32,7 @@ function draw() {
   push();
   noFill();
   colorMode(RGB, 255, 255, 255, 1);
-  stroke(240,240,240, 1);
+  stroke(240, 240, 240, 1);
   strokeCap(ROUND);
   strokeWeight(2);
   for (var i = 0, x = stars.length; i < x; i++) {
@@ -51,15 +50,14 @@ function update() {
   for (var i = 0, x = stars.length; i < x; i++) {
     var s = stars[i];
 
-
-    var rad = (frameCount * (1/(s.orbit*2 + s.offset)) + s.offset) % TAU;
-    s.x = (originX + cos(rad)*(s.orbit*2));
-    s.y = (originY + sin(rad)*(s.orbit));
+    var rad = (frameCount * (1 / (s.orbit * 2 + s.offset)) + s.offset) % TAU;
+    s.x = originX + cos(rad) * (s.orbit * 2);
+    s.y = originY + sin(rad) * s.orbit;
   }
 }
 
 function windowResized() {
-    WIDTH = window.innerWidth,
-    HEIGHT = window.innerHeight,
+  (WIDTH = window.innerWidth),
+    (HEIGHT = window.innerHeight),
     resizeCanvas(WIDTH, HEIGHT);
 }

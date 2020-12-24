@@ -1,14 +1,14 @@
-@import url('assets/fonts/Raleway');
+@import url("assets/fonts/Raleway");
 html {
   width: 100%;
 }
 
 body {
   margin: 0;
-  moz-transition: all .4s ease-in-out;
-  -o-transition: all .4s ease-in-out;
-  -webkit-transition: all .4s ease-in-out;
-  transition: all .4s ease-in-out;
+  moz-transition: all 0.4s ease-in-out;
+  -o-transition: all 0.4s ease-in-out;
+  -webkit-transition: all 0.4s ease-in-out;
+  transition: all 0.4s ease-in-out;
   font-family: "Raleway", sans-serif;
   color: #333133;
 }
@@ -16,6 +16,7 @@ body {
 main {
   display: grid;
   grid-template-columns: 100px 1fr;
+  overflow: hidden;
 }
 
 h1 {
@@ -131,7 +132,8 @@ h3 {
 .header-inner {
   display: grid;
   grid-template: repeat(24, 1fr) / repeat(24, 1fr);
-  max-height: 900px;
+  max-height: 100vh;
+  width: inherit;
 }
 
 .header-inner a {
@@ -150,7 +152,9 @@ header#header {
   position: relative;
 }
 
-.header-one, .header-two, .header-three {
+.header-one,
+.header-two,
+.header-three {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -171,7 +175,9 @@ header#header {
   width: 360px;
 }
 
-.header-one:hover, .header-two:hover, .header-three:hover {
+.header-one:hover,
+.header-two:hover,
+.header-three:hover {
   background-color: rgba(255, 255, 255, 0.6);
 }
 
@@ -293,7 +299,7 @@ section.insta {
 
 .Project h3 {
   font-size: 2em;
-  color: #EC03C1;
+  color: #ec03c1;
   font-weight: 600;
 }
 
@@ -314,7 +320,11 @@ section.insta {
   height: 3px;
   width: 250px;
   background: rgb(120, 64, 255);
-  background: linear-gradient(90deg, rgba(120, 64, 255, 1) 0%, rgba(222, 0, 255, 1) 100%);
+  background: linear-gradient(
+    90deg,
+    rgba(120, 64, 255, 1) 0%,
+    rgba(222, 0, 255, 1) 100%
+  );
 }
 
 .project-about {
@@ -480,7 +490,7 @@ footer i {
 }
 
 .reverse {
-  transform: rotateY( 180deg);
+  transform: rotateY(180deg);
 }
 
 /* At the top level of your code */
@@ -496,7 +506,9 @@ footer i {
     height: 100vh;
     position: relative;
   }
-  .header-one, .header-two, .header-three {
+  .header-one,
+  .header-two,
+  .header-three {
     display: none;
   }
   .header-text {
@@ -529,7 +541,8 @@ footer i {
     display: block !important;
     width: 100% !important;
   }
-  .footer-col-1, .footer-col-2 {
+  .footer-col-1,
+  .footer-col-2 {
     display: none;
   }
   .footer-col-3 {
@@ -538,7 +551,8 @@ footer i {
     margin-left: auto;
     margin-right: auto;
   }
-  footer p, footer h3 {
+  footer p,
+  footer h3 {
     text-align: center !important;
     margin: 0;
     margin-top: 1em;
